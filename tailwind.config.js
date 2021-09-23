@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       colors: {
         backblue: "#21242E",
-        navblack: "#232323"
+        navblack: "#232323",
+        pfontgray: "#C4C4C4"
        },
     },
   },
