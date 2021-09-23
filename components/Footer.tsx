@@ -1,19 +1,29 @@
 const Fotter: React.FC = () => {
   return (
-    <div className="flex flex-col static bottom-0">
-      <div className="flex flex-col text-center mb-4 md:flex-row justify-between">
-        <div className="mb-4">
-          <h1>Left</h1>
+    <div className="flex flex-col static bottom-0 p-8 pb-1">
+      <div className="flex flex-col mb-4 justify-between md:flex-row">
+        <div className="mb-4 text-xs sm:text-sm md:text-base md:mr-20 md:text-left">
+          <div className="text-sm font-bold mb-3 md:text-4xl">
+            <h2>Blockmetric</h2>
+          </div>
+          <div>
+            <p className="text-pfontgray text-left">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
         </div>
-        <div className="flex justify-around text-xs sm:text-sm md:mr-5 md:gap-5 md:text-base">
+        <div className=" text-center flex justify-between text-xs sm:text-sm md:text-base md:mr-5 md:gap-5 ">
           <div className="">
-            <h3 className="mb-2">Company</h3>
+            <h3 className="mb-2 md:text-xl">Company</h3>
             <p className="text-pfontgray">About Us</p>
             <p className="text-pfontgray">Terms and conditions</p>
             <p className="text-pfontgray">Privacy Policy</p>
           </div>
           <div className="">
-            <h3 className="mb-2">Join Us</h3>
+            <h3 className="mb-2 md:text-xl">Join Us</h3>
             <p className="text-pfontgray">Careers</p>
             <p className="text-pfontgray">Community</p>
           </div>
