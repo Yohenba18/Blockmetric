@@ -1,6 +1,6 @@
 const Fotter: React.FC = () => {
   return (
-    <div>
+    <div className="">
       <h1>Footer</h1>
     </div>
   );
