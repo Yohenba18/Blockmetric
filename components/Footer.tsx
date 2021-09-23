@@ -2,12 +2,12 @@ const Fotter: React.FC = () => {
   return (
     <div className=" flex flex-col static bottom-0 p-8 pb-1 md:pl-2 md:pr-2 md:max-w-7xl mx-auto">
       <div className="flex flex-col mb-4 justify-between md:flex-row">
-        <div className="mb-4 text-xs sm:text-sm md:text-base md:mr-20 md:text-left">
+        <div className="mb-4 text-xs text-center sm:text-sm md:text-base md:mr-20 md:text-left">
           <div className="text-xl font-bold mb-3 md:text-4xl">
             <h2>Blockmetric</h2>
           </div>
           <div>
-            <p className="text-pfontgray text-left max-w-2xl">
+            <p className="text-pfontgray max-w-2xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
