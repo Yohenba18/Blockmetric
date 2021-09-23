@@ -1,6 +1,6 @@
 const Fotter: React.FC = () => {
   return (
-    <div className="flex flex-col static bottom-0 p-8 pb-1 md:pl-2 md:pr-2 md:max-w-7xl mx-auto">
+    <div className=" flex flex-col static bottom-0 p-8 pb-1 md:pl-2 md:pr-2 md:max-w-7xl mx-auto">
       <div className="flex flex-col mb-4 justify-between md:flex-row">
         <div className="mb-4 text-xs sm:text-sm md:text-base md:mr-20 md:text-left">
           <div className="text-xl font-bold mb-3 md:text-4xl">

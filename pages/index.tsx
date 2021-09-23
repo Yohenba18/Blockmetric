@@ -14,7 +14,9 @@ export default function Home() {
       </Head>
       <Navbar />
       <h1>Main Page</h1>
-      <Footer />
+      <div className="bg-navblack">
+        <Footer />
+      </div>
     </div>
   );
 }
