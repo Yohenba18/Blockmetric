@@ -1,14 +1,17 @@
-export const Singlecard: React.FC = () => {
+export const Singlecard = ({ name, url, words, designation }) => {
   return (
     <div>
-      <div className="">
-        <h1>Avatar</h1>
+      <div className="flex justify-between">
+        <div>
+          <img src={url} alt={name} height="300" width="100" className="object-contain rounded-full border-2 border-activepurple"/>
+        </div>
+        <div className="">
+          <h2>{name}</h2>
+          <h4>{designation}</h4>
+        </div>
       </div>
-      <div className="">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl
-          augue, mattis sit amet felis vel, pretium faucibus metu
-        </p>
+      <div className="font-light">
+        <p>{words}</p>
       </div>
     </div>
   );

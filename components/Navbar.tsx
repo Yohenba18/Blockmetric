@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
             <Link href="/">Analysis</Link>
           </div>
           <div className="md:mr-11 hover:text-green-500">
-            <Link href="/Product">Product</Link>
+            <Link href="/Product" >Product</Link>
           </div>
           <div className=" hover:text-green-500">
             <Link href="/Resources">Resources</Link>
