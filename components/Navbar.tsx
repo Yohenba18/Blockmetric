@@ -8,19 +8,19 @@ const Navbar: React.FC = () => {
         <div className="text-2xl md:text-3xl md:mt-3">
           <h1>Blockmetric</h1>
         </div>
-        <div className="hidden md:flex gap-10 md:gap-15 lg:gap-20 text-lg font-normal mt-4">
-          <div className="md:mr-11">
+        <div className="hidden md:flex gap-10 md:gap-15 lg:gap-20 text-lg font-medium mt-4">
+          <div className="md:mr-11 hover:text-green-500">
             <Link href="/">Analysis</Link>
           </div>
-          <div className="md:mr-11">
+          <div className="md:mr-11 hover:text-green-500">
             <Link href="/Product">Product</Link>
           </div>
-          <div>
+          <div className=" hover:text-green-500">
             <Link href="/Resources">Resources</Link>
           </div>
         </div>
-        <div className="hidden md:flex  font-bold">
-          <div className="mt-5 ">LOGIN</div>
+        <div className="hidden md:flex font-bold">
+          <div className="mt-5 hover:text-green-500">LOGIN</div>
           <hr className=" mt-8 transform rotate-90 text-white w-12 " />
           <div className="p-2 md:p-4 border-4 rounded-full border-green-600 mt-0 hover:bg-green-600">
             SIGN IN
