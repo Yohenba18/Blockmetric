@@ -1,6 +1,6 @@
-const Blogcard: React.FC = () => {
+export const Singlecard: React.FC = () => {
   return (
-    <div className="">
+    <div>
       <div className="">
         <h1>Avatar</h1>
       </div>
@@ -13,5 +13,3 @@ const Blogcard: React.FC = () => {
     </div>
   );
 };
-
-export default Blogcard;

@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         backblue: "#21242E",
         navblack: "#232323",
-        pfontgray: "#C4C4C4"
+        pfontgray: "#C4C4C4",
+        bordergreen: "#00B13B"
        },
     },
   },
