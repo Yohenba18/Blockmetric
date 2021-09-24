@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { MenuIcon } from "@heroicons/react/solid";
+import { BeakerIcon } from '@heroicons/react/solid'
 
 const Navbar: React.FC = () => {
   return (
-    <div className="flex justify-between max-w-7xl mx-auto pt-7 p-2">
+    <div className="flex justify-between max-w-7xl mx-auto pt-7 p-4 md:p-2 md:pt-7">
       <div className="text-2xl">
         <h1>Blockmetric</h1>
       </div>
@@ -24,7 +25,7 @@ const Navbar: React.FC = () => {
         <div>SIGN IN</div>
       </div>
       <div className="flex md:hidden">
-        <MenuIcon className="text-white" />
+        <MenuIcon className="text-white h-10 w-10" />
       </div>
     </div>
   );
