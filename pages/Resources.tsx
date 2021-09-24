@@ -1,8 +1,12 @@
+import Layout from "../components/Layout";
+
 function Resources() {
     return (
-        <div>
+        <div className="bg-backblue text-white h-auto">
+        <Layout>
             <h1>Resources</h1>
-        </div>
+        </Layout>
+      </div>
     )
 }
 

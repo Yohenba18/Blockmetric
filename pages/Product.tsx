@@ -1,8 +1,12 @@
+import Layout from "../components/Layout";
+
 function Product() {
     return (
-        <div>
-            <h1>Product</h1>
-        </div>
+        <div className="bg-backblue text-white h-auto">
+        <Layout>
+            <h1>Products</h1>
+        </Layout>
+      </div>
     )
 }
 
