@@ -1,9 +1,11 @@
+
+
 export const Singlecard = ({ name, url, words, designation }) => {
   return (
-    <div>
+    <div className="w-80">
       <div className="flex justify-between">
         <div>
-          <img src={url} alt={name} height="300" width="100" className="object-contain rounded-full border-2 border-activepurple"/>
+          <img src={url} alt={name} height="100" width="100" className="rounded-full border-2 border-activepurple"/>
         </div>
         <div className="">
           <h2>{name}</h2>
