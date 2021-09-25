@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
 
   const router = useRouter();
   return (
-    <nav className="flex justify-between items-center mb-5 max-w-7xl mx-auto pt-7 p-4 md:p-2 md:pt-7">
+    <nav className="flex justify-between items-center mb-5 max-w-7xl mx-auto pt-5 p-4 md:p-2 md:pt-7">
       <div className="text-2xl md:text-3xl md:mt-3">
         <Link href="/">
           <a className={router.pathname == "/" ? "text-white" : ""}>
@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
                 : "transform rotate-90 text-white w-12 "
             }
           />
-          <div className="p-2 md:p-4 w-28  border-4 rounded-full border-green-600  hover:bg-green-600">
+          <div className="p-2 md:px-4 w-28 border-4 rounded-full border-green-600  hover:bg-green-600">
             SIGN IN
           </div>
         </div>

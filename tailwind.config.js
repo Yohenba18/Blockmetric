@@ -11,9 +11,11 @@ module.exports = {
         pfontgray: "#C4C4C4",
         bordergreen: "#00B13B",
         activepurple: "#9446EF",
+        gradientpurple: "#7951A8",
         cardbg :"#0B0C0F",
         dropbg : "#21242E",
-        bloglightblue: "#193766"
+        bloglightblue: "#193766",
+        purplebg:"#322145"
        },
     },
   },
