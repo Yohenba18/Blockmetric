@@ -33,9 +33,10 @@ const Navbar: React.FC = () => {
         </Link>
       </div>
       <div
+        // style={{ transition: "all 3s ease-in-out" }}
         className={
           openModal
-            ? "transition duration-500 ease-out absolute top-20 left-0 w-full flex flex-col mx-auto gap-3 py-6 text-lg font-bold text-center bg-dropbg shadow-md"
+            ? "transition duration-500 ease-in-out absolute top-20 left-0 w-full flex flex-col mx-auto gap-3 py-6 text-lg font-bold text-center bg-dropbg shadow-md"
             : "hidden md:flex gap-10 md:gap-15 lg:gap-20 text-lg font-medium mt-4 items-center"
         }
       >

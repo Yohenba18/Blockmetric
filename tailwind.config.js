@@ -12,7 +12,8 @@ module.exports = {
         bordergreen: "#00B13B",
         activepurple: "#9446EF",
         cardbg :"#0B0C0F",
-        dropbg : "#21242E"
+        dropbg : "#21242E",
+        bloglightblue: "#193766"
        },
     },
   },

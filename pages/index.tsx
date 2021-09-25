@@ -9,12 +9,16 @@ export default function Home() {
           <div className="font-extrabold text-5xl md:text-7xl">
             <h1>BlockMetric</h1>
           </div>
-          <div className="text-gray-300 text-lg mt-4">
+          <div className="text-gray-300 text-xl mt-4">
             <p>
               Analyse your perfomance with the real time data of the exisiting
               blockchains
             </p>
           </div>
+        </div>
+        <div className="">
+            <div></div>
+            <div></div>
         </div>
         <Blogcards />
       </Layout>
