@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MenuIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -62,6 +62,15 @@ const Navbar: React.FC = () => {
             <h1>Blockmetric</h1>
           </a>
         </Link>
+      </div>
+      <div className="flex md:hidden">
+        <button onClick={() => setOpenModal(!openModal)}>
+          {openModal ? (
+            <XIcon className="text-white h-10 w-10" />
+          ) : (
+            <MenuIcon className="text-white h-10 w-10" />
+          )}
+        </button>
       </div>
       <div
         // style={{ transition: "all 3s ease-in-out" }}
@@ -157,11 +166,6 @@ const Navbar: React.FC = () => {
             </div>
           </button>
         </div>
-      </div>
-      <div className="flex md:hidden">
-        <button onClick={() => setOpenModal(!openModal)}>
-          <MenuIcon className="text-white h-10 w-10" />
-        </button>
       </div>
     </nav>
   );
