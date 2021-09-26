@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MenuIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Navbar: React.FC = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -21,6 +22,36 @@ const Navbar: React.FC = () => {
       setOpenModal(false);
     }
   }, [openModal]);
+
+  const [isHover, toggleHover] = useState(false);
+  const toggleHoverMenu = () => {
+    toggleHover(!isHover);
+  };
+  const [isMouse, toggleMouse] = useState(false);
+  const toggleMouseMenu = () => {
+    toggleMouse(!isMouse);
+  };
+  const subMenuAnimate = {
+    enter: {
+      opacity: 1,
+      rotateX: 0,
+      transition: {
+        duration: 0.5,
+      },
+      display: "block",
+    },
+    exit: {
+      opacity: 0,
+      rotateX: -15,
+      transition: {
+        duration: 0.5,
+        delay: 0.3,
+      },
+      transitionEnd: {
+        display: "none",
+      },
+    },
+  };
 
   const router = useRouter();
   return (
@@ -63,15 +94,47 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
         <div className="hover:text-green-500">
-          <Link href="/Resources">
-            <a
-              className={
-                router.pathname == "/Resources" ? "text-activepurple" : ""
-              }
+          <motion.div
+            className=""
+            onHoverStart={toggleHoverMenu}
+            onHoverEnd={toggleHoverMenu}
+          >
+            <Link href="/Resources">
+              <a
+                className={
+                  router.pathname == "/Resources" ? "text-activepurple " : ""
+                }
+              >
+                Resources
+              </a>
+            </Link>
+            <motion.div
+              className="sub-menu"
+              initial="exit"
+              animate={isHover ? "enter" : "exit"}
+              variants={subMenuAnimate}
             >
-              Resources
-            </a>
-          </Link>
+              <div className="hidden absolute mt-5 w-48 md:flex flex-col text-gray-300 bg-navblack p-5 gap-2">
+                <Link href="/Community">
+                  <div className="cursor-pointer hover:text-green-500">
+                    Community
+                  </div>
+                </Link>
+                <hr className="w-36 bg-green-600 " />
+                <Link href="/Contactus">
+                  <div className="cursor-pointer hover:text-green-500">
+                    Contact Us
+                  </div>
+                </Link>
+                <hr className="w-36 bg-green-600" />
+                <Link href="/">
+                  <div className="cursor-pointer hover:text-green-500">
+                    Apis
+                  </div>
+                </Link>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
         <div className=" flex flex-col items-center font-bold gap-4 text-center md:flex-row md:gap-1 ">
           <div className=" hover:text-green-500">LOGIN</div>
