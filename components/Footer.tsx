@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Fotter: React.FC = () => {
   return (
     <footer className="bg-navblack">
@@ -19,14 +21,34 @@ const Fotter: React.FC = () => {
           <div className=" text-center flex justify-between text-xs sm:text-sm md:text-base md:mr-5 md:gap-5 ">
             <div className="">
               <h3 className="mb-2 text-base font-bold md:text-xl">Company</h3>
-              <p className="text-pfontgray">About Us</p>
-              <p className="text-pfontgray">Terms and conditions</p>
-              <p className="text-pfontgray">Privacy Policy</p>
+              <Link href="/AboutUs">
+                <p className="text-pfontgray cursor-pointer hover:text-gray-200">
+                  About Us
+                </p>
+              </Link>
+              <Link href="/TAndC">
+                <p className="text-pfontgray cursor-pointer hover:text-gray-200">
+                  Terms and conditions
+                </p>
+              </Link>
+              <Link href="/Privacy">
+                <p className="text-pfontgray cursor-pointer hover:text-gray-200">
+                  Privacy Policy
+                </p>
+              </Link>
             </div>
             <div className="">
               <h3 className="mb-2 text-base font-bold md:text-xl">Join Us</h3>
-              <p className="text-pfontgray">Careers</p>
-              <p className="text-pfontgray">Community</p>
+              <Link href="/Careers">
+                <p className="text-pfontgray cursor-pointer hover:text-gray-200">
+                  Careers
+                </p>
+              </Link>
+              <Link href="/Community">
+                <p className="text-pfontgray cursor-pointer hover:text-gray-200">
+                  Community
+                </p>
+              </Link>
             </div>
           </div>
         </div>

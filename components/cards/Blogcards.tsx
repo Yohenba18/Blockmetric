@@ -1,11 +1,13 @@
 import { Singlecard } from "./Singlecard";
-import data from "../data/BlogCard.json";
+import data from "../../data/BlogCard.json";
 
 const Blogcards: React.FC = () => {
   return (
-    <div className="flex flex-col h-80 bg-gradient-to-t from-bloglightblue">
-      <div className="text-center font-bold md:text-3xl "><h1>Blogs</h1></div>
-      <div className="flex gap-7 max-w-7xl mx-auto">
+    <div className="flex flex-col h-96 bg-gradient-to-t from-bloglightblue">
+      <div className="text-center font-bold text-2xl md:text-4xl ">
+        <h1>Blogs</h1>
+      </div>
+      <div className="flex justify-center gap-7 max-w-7xl mx-auto pt-20">
         {data.data.cards.map((card) => (
           <Singlecard
             name={card.name}

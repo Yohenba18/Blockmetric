@@ -1,6 +1,6 @@
-import Blogcards from "../components/Blogcards";
+import Blogcards from "../components/cards/Blogcards";
 import Layout from "../components/Layout";
-import { Table } from "../components/table";
+import Table from "../components/Table";
 import Image from "next/image";
 
 export default function Home() {
@@ -24,11 +24,11 @@ export default function Home() {
           </div>
           <Table />
         </div>
-        <div className="flex flex-col md:flex-row justify-evenly h-96 text-center items-center max-w-7xl mx-auto">
+        <div className="text-center items-center flex flex-col md:flex-row justify-evenly h-96 max-w-7xl mx-auto">
           <div className="flex align-center h-64 w-72 bg-gray-400"></div>
-          <div className="flex flex-col w-72 text-center">
-            <div className="flex text-center">
-              <h1 className="font-bold text-2xl md:text-4xl">Who are we?</h1>
+          <div className="flex flex-col">
+            <div className="flex text-center font-bold text-2xl md:text-4xl">
+              <h1 className="">Who are we?</h1>
             </div>
             <p className="md:flex text-pfontgray text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
