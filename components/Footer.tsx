@@ -22,17 +22,17 @@ const Fotter: React.FC = () => {
             <div className="">
               <h3 className="mb-2 text-base font-bold md:text-xl">Company</h3>
               <Link href="/AboutUs">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-200">
+                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
                   About Us
                 </p>
               </Link>
               <Link href="/TAndC">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-200">
+                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
                   Terms and conditions
                 </p>
               </Link>
               <Link href="/Privacy">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-200">
+                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
                   Privacy Policy
                 </p>
               </Link>
@@ -40,12 +40,12 @@ const Fotter: React.FC = () => {
             <div className="">
               <h3 className="mb-2 text-base font-bold md:text-xl">Join Us</h3>
               <Link href="/Careers">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-200">
+                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
                   Careers
                 </p>
               </Link>
               <Link href="/Community">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-200">
+                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
                   Community
                 </p>
               </Link>

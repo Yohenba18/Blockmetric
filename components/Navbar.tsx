@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
 
   const router = useRouter();
   return (
-    <nav className="sticky top-0 z-50 bg-backblue flex justify-between items-center mb-5 px-3 py-6 lg:px-28 md:pt-7">
+    <nav className="sticky top-0 z-50 bg-backblue flex justify-between items-center mb-5 px-3 py-4 lg:px-28 md:pt-0">
       <div className="text-3xl font-semibold md:text-3xl lg-text-4xl md:mt-3">
         <Link href="/">
           <a className={router.pathname == "/" ? "text-white" : ""}>
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
         className={
           openModal
             ? "transition duration-500 ease-in-out absolute top-20 left-0 w-full flex flex-col mx-auto gap-3 py-6 text-lg font-bold text-center bg-dropbg shadow-md"
-            : "hidden gap-10 md:flex md:gap-5 lg:gap-20 text-lg font-medium mt-4 items-center"
+            : "hidden gap-10 md:flex md:gap-5 lg:gap-16 text-lg font-medium mt-4 items-center"
         }
       >
         <div className="md:mr-11 hover:text-green-500">
@@ -145,7 +145,7 @@ const Navbar: React.FC = () => {
             </motion.div>
           </motion.div>
         </div>
-        <div className=" flex flex-col items-center font-bold gap-4 text-center md:flex-row md:gap-1 ">
+        <div className="flex flex-col items-center font-bold gap-4 text-center md:flex-row md:gap-0 ">
           <div className=" hover:text-green-500">LOGIN</div>
           <hr
             className={
@@ -158,8 +158,8 @@ const Navbar: React.FC = () => {
             <div
               className={
                 openModal
-                  ? "p-2 md:px-4 w-28 border-4 rounded-full border-green-600  bg-green-600"
-                  : "p-2 md:px-4 w-28 border-4 rounded-full border-green-600  hover:bg-green-600"
+                  ? "p-2 md:px-3 border-4 rounded-full border-green-600  bg-green-600"
+                  : "p-2 md:px-3 border-4 rounded-full border-green-600  hover:bg-green-600"
               }
             >
               SIGN IN
