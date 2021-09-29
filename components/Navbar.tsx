@@ -55,8 +55,8 @@ const Navbar: React.FC = () => {
 
   const router = useRouter();
   return (
-    <nav className="sticky top-0 z-50 bg-backblue flex justify-between items-center mb-5 px-3 py-4 lg:px-28 md:pt-0">
-      <div className="text-3xl font-semibold md:text-3xl lg-text-4xl md:mt-3">
+    <nav className="sticky top-0 z-50 bg-backblue flex justify-between items-center px-3 py-3 lg:px-28 md:pt-0">
+      <div className="text-3xl font-semibold md:text-3xl lg-text-4xl md:mt-2">
         <Link href="/">
           <a className={router.pathname == "/" ? "text-white" : ""}>
             <h1>Blockmetric</h1>
@@ -66,9 +66,9 @@ const Navbar: React.FC = () => {
       <div className="flex md:hidden">
         <button onClick={() => setOpenModal(!openModal)}>
           {openModal ? (
-            <XIcon className="text-white h-10 w-10" />
+            <XIcon className="text-white h-6 w-6" />
           ) : (
-            <MenuIcon className="text-white h-10 w-10" />
+            <MenuIcon className="text-white h-6 w-6" />
           )}
         </button>
       </div>
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
         // style={{ transition: "all 3s ease-in-out" }}
         className={
           openModal
-            ? "transition duration-500 ease-in-out absolute top-20 left-0 w-full flex flex-col mx-auto gap-3 py-6 text-lg font-bold text-center bg-dropbg shadow-md"
+            ? "transition duration-500 ease-in-out absolute top-14 left-0 w-full flex flex-col mx-auto gap-3 py-6 text-lg font-bold text-center bg-dropbg shadow-md"
             : "hidden gap-10 md:flex md:gap-5 lg:gap-16 text-lg font-medium mt-4 items-center"
         }
       >
@@ -102,21 +102,21 @@ const Navbar: React.FC = () => {
             </a>
           </Link>
         </div>
-        <div className="hover:text-green-500">
+        <div className="hover:text-green-500 cursor-pointer">
           <motion.div
             className=""
             onHoverStart={toggleHoverMenu}
             onHoverEnd={toggleHoverMenu}
           >
-            <Link href="/Resources">
-              <a
+          {/*  <Link href="/Resources">
+               <a
                 className={
                   router.pathname == "/Resources" ? "text-activepurple " : ""
                 }
-              >
+              > */}
                 Resources
-              </a>
-            </Link>
+              {/* </a> 
+            </Link>*/}
             <motion.div
               className="sub-menu"
               initial="exit"

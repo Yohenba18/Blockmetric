@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="bg-backblue text-white h-auto">
       <Layout>
-        <div className="text-center h-96 flex flex-col justify-center px-5 bg-gradient-to-b from-gradientpurple">
+        <div className="text-center h-96 py-20 flex flex-col justify-center px-5 bg-gradient-to-b from-gradientpurple">
           <div className="font-extrabold text-5xl md:text-7xl">
             <h1>BlockMetric</h1>
           </div>
@@ -20,7 +20,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto flex flex-col h-96">
+        <div className="max-w-7xl mx-auto flex flex-col items-center md:items-start h-96">
           <div className="font-bold text-2xl md:text-4xl">
             <h1>OVERALL RANKING</h1>
           </div>

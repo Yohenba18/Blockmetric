@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 export const Singlecard = ({ name, url, words, designation }) => {
   return (
     <div className="w-72 md:w-80 text-center h-72 bg-cardbg">
