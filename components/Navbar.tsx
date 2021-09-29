@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Navbar: React.FC = () => {
   const [openModal, setOpenModal] = useState(false);
-
+  const [user, setUser] = useState(false);
   function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
     return {
@@ -58,9 +58,7 @@ const Navbar: React.FC = () => {
     <nav className="sticky top-0 z-50 bg-backblue flex justify-between items-center px-3 py-3 lg:px-28 md:pt-0">
       <div className="text-3xl font-semibold md:text-3xl lg-text-4xl md:mt-2">
         <Link href="/">
-          <a className={router.pathname == "/" ? "text-white" : ""}>
-            <h1>Blockmetric</h1>
-          </a>
+          <h1 className="cursor-pointer">Blockmetric</h1>
         </Link>
       </div>
       <div className="flex md:hidden">
@@ -108,14 +106,14 @@ const Navbar: React.FC = () => {
             onHoverStart={toggleHoverMenu}
             onHoverEnd={toggleHoverMenu}
           >
-          {/*  <Link href="/Resources">
+            {/*  <Link href="/Resources">
                <a
                 className={
                   router.pathname == "/Resources" ? "text-activepurple " : ""
                 }
               > */}
-                Resources
-              {/* </a> 
+            Resources
+            {/* </a> 
             </Link>*/}
             <motion.div
               className="sub-menu"
@@ -145,8 +143,20 @@ const Navbar: React.FC = () => {
             </motion.div>
           </motion.div>
         </div>
+        {user && (
+          <div className="">
+            <input type="text"></input>
+          </div>
+        )}
+
         <div className="flex flex-col items-center font-bold gap-4 text-center md:flex-row md:gap-0 ">
-          <div className=" hover:text-green-500">LOGIN</div>
+          <Link href="/Login">
+            <a
+              className={router.pathname == "/Login" ? "text-activepurple" : ""}
+            >
+              <div className=" hover:text-green-500 cursor-pointer">LOGIN</div>
+            </a>
+          </Link>
           <hr
             className={
               openModal
@@ -154,17 +164,19 @@ const Navbar: React.FC = () => {
                 : "transform rotate-90 text-white w-12 "
             }
           />
-          <button>
+          <Link href="/SignUp">
             <div
               className={
                 openModal
-                  ? "p-2 md:px-3 border-4 rounded-full border-green-600  bg-green-600"
-                  : "p-2 md:px-3 border-4 rounded-full border-green-600  hover:bg-green-600"
+                  ? "p-2 md:px-3 border-4 rounded-full border-green-600  bg-green-600 cursor-pointer"
+                  : router.pathname == "/SignUp"
+                  ? "p-2 md:px-3 border-4 rounded-full border-green-600 cursor-pointer bg-green-600"
+                  : "p-2 md:px-3 border-4 rounded-full border-green-600  hover:bg-green-600 cursor-pointer"
               }
             >
               SIGN IN
             </div>
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
