@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MenuIcon, XIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -53,6 +53,15 @@ const Navbar: React.FC = () => {
     },
   };
 
+  const hovericon = {
+    opened: {
+      rotate: 180,
+    },
+    closed: {
+      rotate:  0
+    },
+  };
+
   const router = useRouter();
   return (
     <nav className="sticky top-0 z-50 bg-backblue flex justify-between items-center px-3 py-3 lg:px-28 md:pt-0">
@@ -100,7 +109,7 @@ const Navbar: React.FC = () => {
             </a>
           </Link>
         </div>
-        <div className="hover:text-green-500 cursor-pointer">
+        <div className=" hover:text-green-500 cursor-pointer">
           <motion.div
             className=""
             onHoverStart={toggleHoverMenu}
@@ -112,7 +121,16 @@ const Navbar: React.FC = () => {
                   router.pathname == "/Resources" ? "text-activepurple " : ""
                 }
               > */}
-            Resources
+            <div className="flex items-center justify-center ml-10">
+              Resources
+              <motion.div
+                variants={hovericon}
+                initial={false}
+                animate={isHover ? "opened" : "closed"}
+              >
+                <ChevronDownIcon className="text-white h-6 w-6 ml-2 " />
+              </motion.div>
+            </div>
             {/* </a> 
             </Link>*/}
             <motion.div

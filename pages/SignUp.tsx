@@ -32,7 +32,7 @@ function SignUp() {
   return (
     <div className="bg-backblue text-white h-auto">
       <Layout>
-        <div className="mx-2xl mx-auto md:flex md:justify-evenly my-5 md:my-10">
+        <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 my-5 md:my-10">
           <div className="bg-gradient-to-r from-gradientpurple py-10 md:p-10 md:py-20 text-center">
             <div className="font-extrabold text-3xl md:text-4xl">Sign Up</div>
             <div className="mt-5">Login methods</div>
