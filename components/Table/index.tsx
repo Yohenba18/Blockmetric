@@ -22,7 +22,8 @@ const Table: React.FC<TableProps> = (props) => {
       value={{
         setCols: (val: string) => {
           tmpCols.push(val);
-          setCols(tmpCols);
+          tmpCols.length === React.Children.toArray(props.children).length &&
+            setCols(tmpCols);
         },
       }}
     >
@@ -34,7 +35,9 @@ const Table: React.FC<TableProps> = (props) => {
           {props.data.map((row: any, rowIndex: number) => (
             <tr key={rowIndex}>
               {cols.map((col: string, colIndex: number) => (
-                <td key={colIndex}>{row[col]}</td>
+                <td key={colIndex} className="table-cell px-2 py-1">
+                  {row[col]}
+                </td>
               ))}
             </tr>
           ))}

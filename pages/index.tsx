@@ -18,12 +18,22 @@ export default function Home() {
       <h1>Main Page</h1>
       <Table
         data={[
-          { id: 1, name: "Ethereum" },
-          { id: 2, name: "Bitcoin" },
+          {
+            id: 1,
+            name: "Ethereum",
+            symbol: "ETH",
+            price: "1.00",
+            change: "0.00",
+            changePercent: "0.00",
+          },
         ]}
       >
         <Column title="#" colId="id" />
         <Column title="Name" colId="name" />
+        <Column title="Symbol" colId="symbol" />
+        <Column title="Price" colId="price" />
+        <Column title="Change" colId="change" />
+        <Column title="Change Percent" colId="changePercent" />
       </Table>
       <Footer />
     </div>

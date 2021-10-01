@@ -8,11 +8,9 @@ interface ColumnProps {
 
 const Column: React.FC<ColumnProps> = (props) => {
   const { setCols } = React.useContext(TableContext);
-  useEffect(() => {
-    setCols(props.colId);
-  }, []);
+  useEffect(() => setCols(props.colId), []);
 
-  return <th>{props.title}</th>;
+  return <th className="table-cell px-2 py-1">{props.title}</th>;
 };
 
 export default Column;
