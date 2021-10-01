@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Table from "../components/Table";
+import Column from "../components/Table/Column";
 
 export default function Home() {
   return (
@@ -15,6 +17,15 @@ export default function Home() {
 
       <Navbar />
       <h1>Main Page</h1>
+      <Table
+        data={[
+          { id: 1, name: "Ethereum" },
+          { id: 2, name: "Bitcoin" },
+        ]}
+      >
+        <Column title="#" colId="id" />
+        <Column title="Name" colId="name" />
+      </Table>
       <Footer />
     </div>
   );
