@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
       rotate: 180,
     },
     closed: {
-      rotate:  0
+      rotate: 0,
     },
   };
 
@@ -80,11 +80,10 @@ const Navbar: React.FC = () => {
         </button>
       </div>
       <div
-        // style={{ transition: "all 3s ease-in-out" }}
         className={
           openModal
-            ? "transition duration-500 ease-in-out absolute top-14 left-0 w-full flex flex-col mx-auto gap-3 py-6 text-lg font-bold text-center bg-dropbg shadow-md"
-            : "hidden gap-10 md:flex md:gap-5 lg:gap-16 text-lg font-medium mt-4 items-center"
+            ? "absolute top-14 left-0 w-full flex flex-col mx-auto gap-3 py-6 text-lg font-bold text-center bg-dropbg shadow-md"
+            : "hidden md:flex md:gap-1 lg:gap-7 text-lg font-medium mt-4 items-center"
         }
       >
         <div className="md:mr-11 hover:text-green-500">
@@ -121,7 +120,7 @@ const Navbar: React.FC = () => {
                   router.pathname == "/Resources" ? "text-activepurple " : ""
                 }
               > */}
-            <div className="flex items-center justify-center ml-10">
+            <div className="flex items-center justify-center ml-10 md:ml-0 md:mr-10">
               Resources
               <motion.div
                 variants={hovericon}
@@ -166,7 +165,6 @@ const Navbar: React.FC = () => {
             <input type="text"></input>
           </div>
         )}
-
         <div className="flex flex-col items-center font-bold gap-4 text-center md:flex-row md:gap-0 ">
           <Link href="/Login">
             <a

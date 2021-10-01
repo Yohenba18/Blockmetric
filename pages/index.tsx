@@ -1,5 +1,5 @@
 import Blogcards from "../components/cards/Blogcards";
-import Layout from "../components/Layout";
+import Layout from "../components/shared/Layout";
 import Table from "../components/Table";
 import Image from "next/image";
 import analysis from "../assets/photo/analysis.jpg";
@@ -26,8 +26,8 @@ export default function Home() {
           </div>
           <Table />
         </div>
-        <div className="items-center flex flex-col md:flex-row md:justify-between h-96 max-w-7xl mx-auto">
-          <div className="flex align-center h-100 w-100 p-5">
+        <div className="items-center flex flex-col md:flex-row md:justify-between h-auto max-w-7xl mx-auto">
+          <div className="flex align-center h-50 w-50 md:h-100 md:w-100 p-5">
             <Image src={analysis} alt="analysis" />
           </div>
           <div className="flex flex-col items-center md:ml-10">
