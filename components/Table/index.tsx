@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import Column from "./Column";
+export { default as Column } from "./Column";
 
 interface ContextType {
   setCols: (val: string) => void;

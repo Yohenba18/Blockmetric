@@ -3,8 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Table from "../components/Table";
-import Column from "../components/Table/Column";
+import Table, { Column } from "../components/Table";
 
 export default function Home() {
   return (
