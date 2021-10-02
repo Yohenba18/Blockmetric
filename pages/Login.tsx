@@ -1,4 +1,5 @@
 import Layout from "../components/shared/Layout";
+import Image from "next/image"
 import Link from "next/link";
 import {
   UserIcon,
@@ -8,17 +9,28 @@ import {
   EyeIcon,
   EyeOffIcon,
 } from "@heroicons/react/solid";
+import googlelogo from "../assets/photo/google.png";
+import githublogo from "../assets/photo/github.png";
+import twitterlogo from "../assets/photo/twitter.png";
 
 function Login() {
-
-  
   return (
     <div className="bg-backblue text-white h-auto">
       <Layout>
         <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 my-5 md:my-10">
           <div className="bg-gradient-to-r from-gradientpurple py-10 md:p-10 md:py-20 text-center">
-            <div className="font-extrabold text-3xl md:text-4xl">Sign Up</div>
-            <div className="mt-5">Login methods</div>
+            <div className="font-extrabold text-3xl md:text-4xl">Login</div>
+            <div className="mt-5 flex justify-center gap-8">
+              <div className="h-10 w-10 cursor-pointer">
+                <Image src={googlelogo} />
+              </div>
+              <div className="h-10 w-10 cursor-pointer">
+                <Image src={githublogo} />
+              </div>
+              <div className="h-10 w-10 cursor-pointer">
+                <Image src={twitterlogo} />
+              </div>
+            </div>
             <div className="flex justify-center items-center gap-2 my-5">
               <hr className="w-32 md:w-36 border-2 bg-green-600 border-green-600" />
               <div className="pb-1">or</div>
@@ -32,17 +44,19 @@ function Login() {
                   type="text"
                   placeholder="Username/Email"
                   autoComplete="off"
-                  className="w-80 h-10 pl-10 text-black rounded-md"
+                  className="w-72 md:w-80 h-10 pl-10 text-black focus:outline-none focus:ring-2 focus:ring-green-600 rounded-md"
+                  required
                 />
               </div>
               <div className="flex items-center">
                 <LockClosedIcon className="text-black h-6 w-6 item absolute ml-2" />
                 <input
                   id="name"
-                  type="text"
+                  type="password"
                   placeholder="Password"
                   autoComplete="off"
-                  className="w-80 h-10 pl-10 text-black rounded-md"
+                  className="w-72 md:w-80 h-10 pl-10 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
+                  required
                 />
               </div>
               <div className="flex mt-5">
@@ -51,7 +65,7 @@ function Login() {
                   <Link href="/forgetpass">Click Here</Link>
                 </div>
               </div>
-              <button className="w-80 bg-buttonbg hover:shadow-xl p-2 rounded-md">
+              <button className="w-72 md:w-80 bg-buttonbg hover:shadow-xl p-2 rounded-md">
                 Submit
               </button>
               <div className="flex justify-evenly">
@@ -64,7 +78,8 @@ function Login() {
           </div>
           <div className="hidden md:flex md:items-center font-medium text-3xl md:text-5xl text-center ml-4">
             Choose the <br /> best for the
-            <br /> project you<br/> build
+            <br /> project you
+            <br /> build
           </div>
         </div>
       </Layout>

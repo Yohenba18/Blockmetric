@@ -1,5 +1,9 @@
 import Layout from "../components/shared/Layout";
 import Link from "next/link";
+import Image from "next/image"
+import googlelogo from "../assets/photo/google.png"
+import githublogo from "../assets/photo/github.png"
+import twitterlogo from "../assets/photo/twitter.png"
 import {
   UserIcon,
   MailIcon,
@@ -32,10 +36,20 @@ function SignUp() {
   return (
     <div className="bg-backblue text-white h-auto">
       <Layout>
-        <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 my-5 md:my-10">
+        <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 py-5 md:py-0 my-5 md:my-10">
           <div className="bg-gradient-to-r from-gradientpurple py-10 md:p-10 md:py-20 text-center">
             <div className="font-extrabold text-3xl md:text-4xl">Sign Up</div>
-            <div className="mt-5">Login methods</div>
+            <div className="mt-5 flex justify-center gap-8">
+              <div className="h-10 w-10 cursor-pointer">
+                <Image src={googlelogo} />
+              </div>
+              <div className="h-10 w-10 cursor-pointer">
+                <Image src={githublogo} />
+              </div>
+              <div className="h-10 w-10 cursor-pointer">
+                <Image src={twitterlogo} />
+              </div>
+            </div>
             <div className="flex justify-center items-center gap-2 my-5">
               <hr className="w-32 md:w-36 border-2 bg-green-600 border-green-600" />
               <div className="pb-1">or</div>
@@ -51,7 +65,8 @@ function SignUp() {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   autoComplete="off"
-                  className="w-80 h-10 pl-10 text-black rounded-md"
+                  className="w-72 md:w-80 h-10 pl-10 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
+                  required
                 />
               </div>
               <div className="flex items-center">
@@ -62,7 +77,8 @@ function SignUp() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email"
-                  className="w-80 h-10 pl-10 text-black rounded-md"
+                  className="w-72 md:w-80 h-10 pl-10 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
+                  required
                 />
               </div>
               <div className="flex items-center">
@@ -74,7 +90,8 @@ function SignUp() {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Password"
                   autoComplete="off"
-                  className="w-80 h-10 pl-10 text-black rounded-md"
+                  className="w-72 md:w-80 h-10 pl-10 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
+                  required
                 />
               </div>
               <div className="flex items-center">
@@ -86,11 +103,12 @@ function SignUp() {
                   value={cnfpassword}
                   onChange={(e) => setCnfPassword(e.target.value)}
                   autoComplete="off"
-                  className="w-80 h-10 pl-10 text-black rounded-md active:shadow-xl"
+                  className="w-72 md:w-80 h-10 pl-10 text-black rounded-md active:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-600"
+                  required
                 />
               </div>
               <button
-                className="w-80 bg-buttonbg hover:shadow-xl p-2 rounded-md"
+                className="w-72 md:w-80 bg-buttonbg hover:shadow-xl p-2 rounded-md"
                 onClick={handleSubmit}
               >
                 Submit
