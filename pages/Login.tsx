@@ -15,7 +15,7 @@ import twitterlogo from "../assets/photo/twitter.png";
 
 function Login() {
   return (
-    <div className="bg-backblue text-white h-auto">
+    <div className="bg-background-primary text-white h-auto">
       <Layout>
         <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 my-5 md:my-10">
           <div className="bg-gradient-to-r from-gradientpurple py-10 md:p-10 md:py-20 text-center">

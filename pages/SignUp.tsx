@@ -34,7 +34,7 @@ function SignUp() {
   };
 
   return (
-    <div className="bg-backblue text-white h-auto">
+    <div className="bg-background-primary text-white h-auto">
       <Layout>
         <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 py-5 md:py-0 my-5 md:my-10">
           <div className="bg-gradient-to-r from-gradientpurple py-10 md:p-10 md:py-20 text-center">
@@ -114,7 +114,7 @@ function SignUp() {
                 Submit
               </button>
               <div className="flex justify-evenly">
-                <div className="text-pfontgray text-sm">
+                <div className="text-text-secondary text-sm">
                   Already have an account?
                 </div>
                 <div className="ml-2 text-sm font-medium text-blue-500 hover:text-blue-600">

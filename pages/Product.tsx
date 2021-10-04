@@ -2,7 +2,7 @@ import Layout from "../components/shared/Layout";
 
 function Product() {
     return (
-        <div className="bg-backblue text-white h-auto">
+        <div className="bg-background-primary text-white h-auto">
         <Layout>
             <h1>Products</h1>
         </Layout>

@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
 
   const router = useRouter();
   return (
-    <nav className="sticky top-0 z-50 bg-backblue flex justify-between items-center px-3 py-3 lg:px-28 md:pt-0">
+    <nav className="sticky top-0 z-50 bg-background-primary flex justify-between items-center px-3 py-3 lg:px-28 md:pt-0">
       <div className="text-3xl font-semibold md:text-3xl lg-text-4xl md:mt-2">
         <Link href="/">
           <h1 className="cursor-pointer">Blockmetric</h1>

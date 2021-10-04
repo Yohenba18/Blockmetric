@@ -1,5 +1,4 @@
 import Layout from "../components/shared/Layout";
-import Link from "next/link";
 import Image from "next/image";
 import githubicon from "../assets/svg/github.svg";
 import instaicon from "../assets/svg/instagram.svg";
@@ -8,11 +7,11 @@ import linkedinicon from "../assets/svg/linkedin.svg";
 
 function Contactus() {
   return (
-    <div className="bg-backblue text-white h-auto">
+    <div className="bg-background-primary text-white h-auto">
       <Layout>
         <div className="bg-gradient-to-r from-gradientpurple mx-2xl mx-auto md:flex md:justify-evenly gap-20">
           <div className="py-10 md:p-10 md:py-20 ">
-            <div className="font-extrabold text-3xl md:text-4xl">
+            <div className="font-extrabold text-3xl md:text-5xl">
               Contact Us
             </div>
             <form className="flex flex-col gap-4 mt-10">

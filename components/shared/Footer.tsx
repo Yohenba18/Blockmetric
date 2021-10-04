@@ -15,7 +15,7 @@ const Fotter: React.FC = () => {
               <h2>Blockmetric</h2>
             </div>
             <div>
-              <p className="text-pfontgray max-w-2xl">
+              <p className="text-text-secondary max-w-2xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -40,18 +40,13 @@ const Fotter: React.FC = () => {
                   <Image src={linkedinicon} className="cursor-pointer" />
                 </div>
               </div>
-              {/*              <Link href="/AboutUs">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
-                  About Us
-                </p>
-  </Link>*/}
               <Link href="/Community">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
+                <p className="text-text-secondary cursor-pointer hover:text-gray-50">
                   Community
                 </p>
               </Link>
               <Link href="/Contactus">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
+                <p className="text-text-secondary cursor-pointer hover:text-gray-50">
                   Contact us
                 </p>
               </Link>
@@ -59,17 +54,17 @@ const Fotter: React.FC = () => {
             <div className="">
               <h3 className="mb-2 text-base font-bold md:text-xl">Company</h3>
               <Link href="/AboutUs">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
+                <p className="text-text-secondary cursor-pointer hover:text-gray-50">
                   About Us
                 </p>
               </Link>
               <Link href="/TAndC">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
+                <p className="text-text-secondary cursor-pointer hover:text-gray-50">
                   Terms and conditions
                 </p>
               </Link>
               <Link href="/Privacy">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
+                <p className="text-text-secondary cursor-pointer hover:text-gray-50">
                   Privacy Policy
                 </p>
               </Link>
@@ -77,12 +72,12 @@ const Fotter: React.FC = () => {
             <div className="">
               <h3 className="mb-2 text-base font-bold md:text-xl">Join Us</h3>
               <Link href="/Careers">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
+                <p className="text-text-secondary cursor-pointer hover:text-gray-50">
                   Careers
                 </p>
               </Link>
               <Link href="/Community">
-                <p className="text-pfontgray cursor-pointer hover:text-gray-50">
+                <p className="text-text-secondary cursor-pointer hover:text-gray-50">
                   Community
                 </p>
               </Link>
