@@ -1,12 +1,18 @@
 import Link from "next/link";
-import { MenuIcon, XIcon, ChevronDownIcon } from "@heroicons/react/solid";
+import {
+  MenuIcon,
+  XIcon,
+  ChevronDownIcon,
+  SearchIcon,
+} from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Avatar from "react-avatar";
 
 const Navbar: React.FC = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
   function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
     return {
@@ -63,6 +69,7 @@ const Navbar: React.FC = () => {
   };
 
   const router = useRouter();
+
   return (
     <nav className="sticky top-0 z-50 bg-background-primary flex justify-between items-center px-3 py-3 lg:px-28 md:pt-0">
       <div className="text-3xl font-semibold md:text-3xl lg-text-4xl md:mt-2">
@@ -90,7 +97,7 @@ const Navbar: React.FC = () => {
           <Link href="/Analysis">
             <a
               className={
-                router.pathname == "/Analysis" ? "text-activepurple" : ""
+                router.pathname == "/Analysis" ? "text-activepurple border-b-2 border-activepurple pb-2" : ""
               }
             >
               Analysis
@@ -101,7 +108,7 @@ const Navbar: React.FC = () => {
           <Link href="/Product">
             <a
               className={
-                router.pathname == "/Product" ? "text-activepurple" : ""
+                router.pathname == "/Product" ? "text-activepurple border-b-2 border-activepurple pb-2" : ""
               }
             >
               Product
@@ -161,39 +168,55 @@ const Navbar: React.FC = () => {
           </motion.div>
         </div>
         {user && (
-          <div className="">
-            <input type="text"></input>
+          <div className="flex items-center">
+            <SearchIcon className="absolute ml-2 text-gray-400 h-6 w-6" />
+            <input
+              type="text"
+              placeholder="Search"
+              className="pl-10 w-44 h-8 rounded-l-md bg-gray-200 text-black text-base focus:outline-none focus:ring-2 focus:ring-activepurple"
+            />
+            <button className="px-2 h-9 rounded-r-md bg-background-secondary2 text-base">Go</button>
           </div>
         )}
-        <div className="flex flex-col items-center font-bold gap-4 text-center md:flex-row md:gap-0 ">
-          <Link href="/Login">
-            <a
-              className={router.pathname == "/Login" ? "text-activepurple" : ""}
-            >
-              <div className=" hover:text-green-500 cursor-pointer">LOGIN</div>
-            </a>
-          </Link>
-          <hr
-            className={
-              openModal
-                ? "text-white w-40"
-                : "transform rotate-90 text-white w-12 "
-            }
-          />
-          <Link href="/SignUp">
-            <div
+
+        {user ? (
+          <Avatar googleId="118096717852922241760" size="50" round={true} />
+        ) : (
+          <div className="flex flex-col items-center font-bold gap-4 text-center md:flex-row md:gap-0 ">
+            <Link href="/Login">
+              <a
+                className={
+                  router.pathname == "/Login" ? "text-activepurple" : ""
+                }
+              >
+                <div className=" hover:text-green-500 cursor-pointer">
+                  LOGIN
+                </div>
+              </a>
+            </Link>
+            <hr
               className={
                 openModal
-                  ? "p-2 md:px-3 border-4 rounded-full border-green-600  bg-green-600 cursor-pointer"
-                  : router.pathname == "/SignUp"
-                  ? "p-2 md:px-3 border-4 rounded-full border-green-600 cursor-pointer bg-green-600"
-                  : "p-2 md:px-3 border-4 rounded-full border-green-600  hover:bg-green-600 cursor-pointer"
+                  ? "text-white w-40"
+                  : "transform rotate-90 text-white w-12 "
               }
-            >
-              SIGN IN
-            </div>
-          </Link>
-        </div>
+            />
+
+            <Link href="/SignUp">
+              <div
+                className={
+                  openModal
+                    ? "p-2 md:px-3 border-4 rounded-full border-green-600  bg-green-600 cursor-pointer"
+                    : router.pathname == "/SignUp"
+                    ? "p-2 md:px-3 border-4 rounded-full border-green-600 cursor-pointer bg-green-600"
+                    : "p-2 md:px-3 border-4 rounded-full border-green-600  hover:bg-green-600 cursor-pointer"
+                }
+              >
+                SIGN IN
+              </div>
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   );

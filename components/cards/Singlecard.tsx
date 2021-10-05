@@ -2,15 +2,15 @@ import Image from "next/image";
 
 export const Singlecard = ({ name, url, words, designation }) => {
   return (
-    <div className="w-72 md:w-80 text-center h-72 bg-cardbg">
-      <div className="flex justify-between bg-green-600">
-        <div>
+    <div className="w-72 md:w-80 text-center h-72 bg-background-card">
+      <div className="flex justify-between bg-green-600 bg-opacity-40">
+        <div className="relative z-10 bottom-8 left-2">
           <Image
             src={url}
             alt={name}
             height="100"
             width="100"
-            className="rounded-full border-2 relative bottom-8 left-2 border-activepurple"
+            className="rounded-full"
           />
         </div>
         <div className="flex flex-col text-left mr-5 mt-5  md:mr-10 ">
