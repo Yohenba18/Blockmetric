@@ -12,7 +12,7 @@ import Avatar from "react-avatar";
 
 const Navbar: React.FC = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
   function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
     return {
@@ -175,7 +175,7 @@ const Navbar: React.FC = () => {
               placeholder="Search"
               className="pl-10 w-44 h-8 rounded-l-md bg-gray-200 text-black text-base focus:outline-none focus:ring-2 focus:ring-activepurple"
             />
-            <button className="px-2 h-9 rounded-r-md bg-background-secondary2 text-base">Go</button>
+            <button className="px-2 h-8 rounded-r-md bg-background-secondary2 text-base">Go</button>
           </div>
         )}
 
