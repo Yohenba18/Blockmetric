@@ -13,16 +13,17 @@ function Analysis() {
     const securePage = async () => {
       const session = await getSession();
       if (!session) {
-        router.push('/SignUp')
+        alert("You are not Logged in");
+        router.push("/SignUp");
       } else {
         setLoading(false);
       }
     };
-    securePage()
+    securePage();
   }, []);
 
-  if(loading){
-    return <h2>Loading.....</h2>
+  if (loading) {
+    return <h2>Loading.....</h2>;
   }
 
   return (
