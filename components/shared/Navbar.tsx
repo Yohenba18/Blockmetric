@@ -9,8 +9,10 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Avatar from "react-avatar";
+import { useSession, signOut } from "next-auth/client";
 
 const Navbar: React.FC = () => {
+  const [session, loading] = useSession();
   const [openModal, setOpenModal] = useState(false);
   const [user, setUser] = useState(false);
   function getWindowDimensions() {
@@ -97,7 +99,9 @@ const Navbar: React.FC = () => {
           <Link href="/Analysis">
             <a
               className={
-                router.pathname == "/Analysis" ? "text-activepurple border-b-2 border-activepurple pb-2" : ""
+                router.pathname == "/Analysis"
+                  ? "text-activepurple border-b-2 border-activepurple pb-2"
+                  : ""
               }
             >
               Analysis
@@ -108,7 +112,9 @@ const Navbar: React.FC = () => {
           <Link href="/Product">
             <a
               className={
-                router.pathname == "/Product" ? "text-activepurple border-b-2 border-activepurple pb-2" : ""
+                router.pathname == "/Product"
+                  ? "text-activepurple border-b-2 border-activepurple pb-2"
+                  : ""
               }
             >
               Product
@@ -167,7 +173,7 @@ const Navbar: React.FC = () => {
             </motion.div>
           </motion.div>
         </div>
-        {user && (
+        {session && (
           <div className="flex items-center">
             <SearchIcon className="absolute ml-2 text-gray-400 h-6 w-6" />
             <input
@@ -175,12 +181,23 @@ const Navbar: React.FC = () => {
               placeholder="Search"
               className="pl-10 w-44 h-8 rounded-l-md bg-gray-200 text-black text-base focus:outline-none focus:ring-2 focus:ring-activepurple"
             />
-            <button className="px-2 h-8 rounded-r-md bg-background-secondary2 text-base">Go</button>
+            <button className="px-2 h-8 rounded-r-md bg-background-secondary2 text-base">
+              Go
+            </button>
           </div>
         )}
 
-        {user ? (
-          <Avatar googleId="118096717852922241760" size="50" round={true} />
+        {session ? (
+          <Link href="/api/auth/signout">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                signOut();
+              }}
+            >
+              <Avatar googleId="118096717852922241760" size="50" round={true} />
+            </a>
+          </Link>
         ) : (
           <div className="flex flex-col items-center font-bold gap-4 text-center md:flex-row md:gap-0 ">
             <Link href="/Login">

@@ -1,0 +1,38 @@
+export default [
+  {
+    id: 1,
+    name: "Ethereum",
+    transaction: 30,
+    gasprice: 0.0005,
+    hashrate: 0.0006951,
+    price: 387,
+    dev: 757859,
+  },
+  {
+    id: 2,
+    name: "Ethereum",
+    transaction: 30,
+    gasprice: 0.0005,
+    hashrate: 0.0006951,
+    price: 387,
+    dev: 757859,
+  },
+  {
+    id: 3,
+    name: "Ethereum",
+    transaction: 30,
+    gasprice: 0.0005,
+    hashrate: 0.0006951,
+    price: 387,
+    dev: 757859,
+  },
+  {
+    id: 4,
+    name: "Ethereum",
+    transaction: 30,
+    gasprice: 0.0005,
+    hashrate: 0.0006951,
+    price: 387,
+    dev: 757859,
+  },
+];

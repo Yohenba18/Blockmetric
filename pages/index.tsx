@@ -1,10 +1,10 @@
-import Blogcards from "../components/Cards/Blogcards";
-import Layout from "../components/shared/Layout";
-import Table from "../components/Table";
 import Image from "next/image";
 import analysis from "../assets/photo/analysis.jpg";
 
+import Blogcards from "../components/Cards/Blogcards";
+import Layout from "../components/shared/Layout";
 import { WhatPro } from "../components/Home/WhatPro";
+import Tableshow from "../components/Table/Tableshow";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
           <div className="font-bold text-2xl md:text-4xl">
             <h1>OVERALL RANKING</h1>
           </div>
-          <Table />
+          <Tableshow />
         </div>
         <div className="items-center flex flex-col md:flex-row md:justify-between h-auto max-w-7xl mx-auto">
           <div className="flex align-center h-50 w-50 md:h-100 md:w-100 p-5">

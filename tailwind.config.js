@@ -11,7 +11,7 @@ module.exports = {
           secondary1: "#193766",
           secondary2: "#7951A8",
           card: "#0B0C0F",
-
+          table: "#1A1A1A"
         },
         text: {
           secondary: "#C4C4C4",

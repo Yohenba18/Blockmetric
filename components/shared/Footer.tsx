@@ -15,7 +15,7 @@ const Fotter: React.FC = () => {
               <h2>Blockmetric</h2>
             </div>
             <div>
-              <p className="text-text-secondary max-w-2xl">
+              <p className="hidden md:flex text-text-secondary max-w-2xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -23,7 +23,7 @@ const Fotter: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className=" text-center flex justify-between text-xs sm:text-sm md:text-base md:mr-5 md:gap-5 ">
+          <div className="text-center flex justify-between text-xs sm:text-sm md:text-base md:mr-5 md:gap-5 ">
             <div className="">
               <h3 className="mb-2 text-base font-bold md:text-xl">Follow Us</h3>
               <div className="flex gap-1 items-center">

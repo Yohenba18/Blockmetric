@@ -1,9 +1,10 @@
 import Layout from "../components/shared/Layout";
 import Link from "next/link";
-import Image from "next/image"
-import googlelogo from "../assets/photo/google.png"
-import githublogo from "../assets/photo/github.png"
-import twitterlogo from "../assets/photo/twitter.png"
+import Image from "next/image";
+import googlelogo from "../assets/photo/google.png";
+import githublogo from "../assets/photo/github.png";
+import twitterlogo from "../assets/photo/twitter.png";
+import { signIn, signOut } from "next-auth/client";
 import {
   UserIcon,
   MailIcon,
@@ -41,10 +42,28 @@ function SignUp() {
             <div className="font-extrabold text-3xl md:text-4xl">Sign Up</div>
             <div className="mt-5 flex justify-center gap-8">
               <div className="h-10 w-10 cursor-pointer">
+              <Link href="/api/auth/signin">
+                  <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signIn('google');
+                    }}
+                  >
                 <Image src={googlelogo} />
+                </a>
+                </Link>
               </div>
               <div className="h-10 w-10 cursor-pointer">
-                <Image src={githublogo} />
+                <Link href="/api/auth/signin">
+                  <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signIn('github');
+                    }}
+                  >
+                    <Image src={githublogo} />
+                  </a>
+                </Link>
               </div>
               <div className="h-10 w-10 cursor-pointer">
                 <Image src={twitterlogo} />
