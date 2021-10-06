@@ -21,7 +21,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto flex flex-col items-center md:items-start h-96">
+        <div className="max-w-7xl mx-auto items-center md:items-start h-96">
           <div className="font-bold text-2xl md:text-4xl">
             <h1>OVERALL RANKING</h1>
           </div>

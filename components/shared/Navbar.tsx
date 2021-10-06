@@ -92,7 +92,7 @@ const Navbar: React.FC = () => {
         className={
           openModal
             ? "absolute top-14 left-0 w-full flex flex-col mx-auto gap-3 py-6 text-lg font-bold text-center bg-dropbg shadow-md"
-            : "hidden md:flex md:gap-1 lg:gap-7 text-lg font-medium mt-4 items-center"
+            : "hidden md:flex md:gap-1 lg:gap-5 text-lg font-medium mt-4 items-center"
         }
       >
         <div className="md:mr-11 hover:text-green-500">
@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
             </a>
           </Link>
         </div>
-        <div className="md:mr-11 hover:text-green-500">
+        {/*        <div className="md:mr-11 hover:text-green-500">
           <Link href="/Product">
             <a
               className={
@@ -120,7 +120,7 @@ const Navbar: React.FC = () => {
               Product
             </a>
           </Link>
-        </div>
+            </div>*/}
         <div className=" hover:text-green-500 cursor-pointer">
           <motion.div
             className=""

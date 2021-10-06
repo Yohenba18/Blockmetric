@@ -3,19 +3,27 @@ import { getSession, signIn } from "next-auth/client";
 import { useEffect, useState } from "react";
 import Tableshow from "../components/Table/Tableshow";
 import { Button } from "../components/Button/Button";
+import { useRouter } from "next/router";
 
 function Analysis() {
+  const router = useRouter();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const securePage = async () => {
       const session = await getSession();
       if (!session) {
+        router.push('/SignUp')
       } else {
         setLoading(false);
       }
     };
+    securePage()
   }, []);
+
+  if(loading){
+    return <h2>Loading.....</h2>
+  }
 
   return (
     <div className="bg-background-primary text-white h-auto">
