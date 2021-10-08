@@ -41,7 +41,7 @@ function Contactus() {
                   className="w-80 h-40 px-7 py-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
                 />
               </div>
-              <button className="w-80 bg-buttonbg hover:shadow-xl p-2 rounded-md">
+              <button className="w-60 bg-buttonbg hover:shadow-xl p-2 rounded-md">
                 Submit
               </button>
             </form>

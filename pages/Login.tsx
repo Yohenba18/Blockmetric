@@ -1,17 +1,14 @@
 import Layout from "../components/shared/Layout";
-import Image from "next/image"
+import Image from "next/image";
 import Link from "next/link";
 import {
   UserIcon,
-  MailIcon,
   LockClosedIcon,
-  CheckIcon,
-  EyeIcon,
-  EyeOffIcon,
 } from "@heroicons/react/solid";
 import googlelogo from "../assets/photo/google.png";
 import githublogo from "../assets/photo/github.png";
 import twitterlogo from "../assets/photo/twitter.png";
+import { signIn, signOut } from "next-auth/client";
 
 function Login() {
   return (
@@ -25,7 +22,16 @@ function Login() {
                 <Image src={googlelogo} />
               </div>
               <div className="h-10 w-10 cursor-pointer">
-                <Image src={githublogo} />
+                <Link href="/api/auth/signin">
+                  <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signIn("github");
+                    }}
+                  >
+                    <Image src={githublogo} />
+                  </a>
+                </Link>
               </div>
               <div className="h-10 w-10 cursor-pointer">
                 <Image src={twitterlogo} />
