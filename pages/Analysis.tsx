@@ -2,9 +2,9 @@ import Layout from "../components/shared/Layout";
 import { getSession, signIn } from "next-auth/client";
 import { useEffect, useState } from "react";
 import Tableshow from "../components/Table/Tableshow";
-import { Button } from "../components/Button/Button";
+import { Button } from "../components/Analysis/Button/Button";
 import { useRouter } from "next/router";
-import { Analysistables } from "../components/Analysis/Analysistables";
+import { Analysistables } from "../components/Analysis/Tables/Analysistables";
 
 function Analysis() {
   const router = useRouter();
