@@ -22,6 +22,32 @@ export default NextAuth({
       clientId: process.env.TWITTER_ID,
       clientSecret: process.env.TWITTER_SECRET,
     }),
+    Providers.Credentials({
+      name: "Credentials",
+      // async authorize(credentials, req) {
+      //   const user = {
+      //     /* add function to get user */
+      //   }
+      //   return user
+      // },
+
+      credentials: {
+        username: { label: "Username", type: "text", placeholder: "jsmith" },
+        email: { label: "Email", type: "email", placeholder: "Email" },
+        password: { label: "Password", type: "password" },
+      },
+
+      authorize(credentials){
+        if(credentials.username === "test" && credentials.password === "test123"){
+          return {
+            id:2,
+            name: "test",
+            email: "test123gmail.com"
+          }
+        }
+      },
+      
+    }),
   ],
   // Database optional. MySQL, Maria DB, Postgres and MongoDB are supported.
   // https://next-auth.js.org/configuration/databases

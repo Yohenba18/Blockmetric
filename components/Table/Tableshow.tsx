@@ -3,7 +3,6 @@ import data from "../../data/Tabledata";
 
 const Tableshow = () => {
   return (
-    <div className="">
     <Table data={data}>
       <Column title="#" colId="id" />
       <Column title="Name" colId="name" />
@@ -13,7 +12,6 @@ const Tableshow = () => {
       <Column title="Market size (B)" colId="price" />
       <Column title="Community size" colId="dev" />
     </Table>
-    </div>
   );
 };
 

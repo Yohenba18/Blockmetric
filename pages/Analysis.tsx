@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Tableshow from "../components/Table/Tableshow";
 import { Button } from "../components/Button/Button";
 import { useRouter } from "next/router";
+import { Analysistables } from "../components/Analysis/Analysistables";
 
 function Analysis() {
   const router = useRouter();
@@ -41,6 +42,7 @@ function Analysis() {
           </div>
           <Button />
         </div>
+        <Analysistables />
       </Layout>
     </div>
   );

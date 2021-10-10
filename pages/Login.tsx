@@ -8,9 +8,22 @@ import {
 import googlelogo from "../assets/photo/google.png";
 import githublogo from "../assets/photo/github.png";
 import twitterlogo from "../assets/photo/twitter.png";
-import { signIn, signOut } from "next-auth/client";
+import { signIn, getSession } from "next-auth/client";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 function Login() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const securePage = async () => {
+      const session = await getSession();
+      if (session) {
+        router.push("/");
+      } 
+    };
+    securePage();
+  }, []);
   return (
     <div className="bg-background-primary text-white h-auto">
       <Layout>

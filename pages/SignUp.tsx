@@ -4,7 +4,7 @@ import Image from "next/image";
 import googlelogo from "../assets/photo/google.png";
 import githublogo from "../assets/photo/github.png";
 import twitterlogo from "../assets/photo/twitter.png";
-import { signIn, signOut } from "next-auth/client";
+import { signIn, getSession } from "next-auth/client";
 import {
   UserIcon,
   MailIcon,
@@ -13,9 +13,11 @@ import {
   EyeIcon,
   EyeOffIcon,
 } from "@heroicons/react/solid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 function SignUp() {
+  const router = useRouter();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -33,6 +35,16 @@ function SignUp() {
       alert("password does not match");
     }
   };
+
+  useEffect(() => {
+    const securePage = async () => {
+      const session = await getSession();
+      if (session) {
+        router.push("/");
+      } 
+    };
+    securePage();
+  }, []);
 
   return (
     <div className="bg-background-primary text-white h-auto">

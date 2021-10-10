@@ -13,8 +13,6 @@ import Avatar from "react-avatar";
 import { useSession, signOut } from "next-auth/client";
 
 
-const Navlinks = ({ router }) => {};
-
 const Navbar: React.FC = () => {
   const [session, loading] = useSession();
   const [openModal, setOpenModal] = useState(false);
