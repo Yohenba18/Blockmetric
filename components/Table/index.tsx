@@ -27,7 +27,7 @@ const Table: React.FC<TableProps> = (props) => {
         },
       }}
     >
-      <table className="table-auto mt-10 w-full overflow-x-scroll">
+      <table className="table-auto mt-10 w-full">
         <thead className="bg-background-table text-text-secondary">
           <tr>{props.children}</tr>
         </thead>
