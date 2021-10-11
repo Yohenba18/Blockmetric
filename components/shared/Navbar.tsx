@@ -12,7 +12,6 @@ import { motion } from "framer-motion";
 import Avatar from "react-avatar";
 import { useSession, signOut } from "next-auth/client";
 
-
 const Navbar: React.FC = () => {
   const [session, loading] = useSession();
   const [openModal, setOpenModal] = useState(false);
@@ -76,7 +75,7 @@ const Navbar: React.FC = () => {
 
   return (
     <Headroom wrapperStyle={{ height: "92px" }} style={{ height: "92px" }}>
-      <nav className="z-50 bg-background-primary flex justify-between items-center px-3 py-3 lg:px-28 md:pt-0">
+      <nav className="z-50 bg-background-primary flex justify-between items-center px-3 lg:px-10 py-3  md:pt-0">
         <div className="text-3xl font-semibold md:text-3xl lg-text-4xl md:mt-2">
           <Link href="/">
             <h1 className="cursor-pointer">Blockmetric</h1>
@@ -202,11 +201,7 @@ const Navbar: React.FC = () => {
                   signOut();
                 }}
               >
-                <Avatar
-                  googleId="118096717852922241760"
-                  size="50"
-                  round={true}
-                />
+                <Avatar name="Wim Mostmans" size="50" round={true} />
               </a>
             </Link>
           ) : (

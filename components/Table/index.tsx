@@ -27,7 +27,7 @@ const Table: React.FC<TableProps> = (props) => {
         },
       }}
     >
-      <table className="table-auto mt-10 w-full">
+      <table className="table-auto mt-10 lg:w-full">
         <thead className="bg-background-table text-text-secondary">
           <tr>{props.children}</tr>
         </thead>
@@ -35,7 +35,10 @@ const Table: React.FC<TableProps> = (props) => {
           {props.data.map((row: any, rowIndex: number) => (
             <tr key={rowIndex} className="border-separate border-t-2">
               {cols.map((col: string, colIndex: number) => (
-                <td key={colIndex} className="table-cell text-center px-2 py-2 bg-background-table">
+                <td
+                  key={colIndex}
+                  className="table-cell text-center px-2 py-2 bg-background-table"
+                >
                   {row[col]}
                 </td>
               ))}

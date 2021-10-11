@@ -93,7 +93,7 @@ export default [
     ],
   },
   {
-    name: "Market Size",
+    title: "Market Size",
     column: "Market size (B)",
     data: [
       {
@@ -124,7 +124,7 @@ export default [
     ],
   },
   {
-    name: "Users",
+    title: "Users",
     column: "Active Uers",
     data: [
       {

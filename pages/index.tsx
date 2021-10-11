@@ -1,7 +1,7 @@
 import Image from "next/image";
 import analysis from "../assets/photo/analysis.jpg";
 
-import Blogcards from "../components/Cards/Blogcards";
+import Blogcards from "../components/Home/Cards/Blogcards";
 import Layout from "../components/shared/Layout";
 import { WhatPro } from "../components/Home/WhatPro";
 import Tableshow from "../components/Table/Tableshow";
@@ -35,7 +35,7 @@ export default function Home() {
             <div className="flex font-bold text-2xl md:text-4xl mb-5">
               Who are we?
             </div>
-            <p className="md:flex text-pfontgray text-base text-center md:text-justify">
+            <p className="md:flex text-text-secondary text-base text-center md:text-justify">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
