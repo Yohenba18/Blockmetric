@@ -8,16 +8,9 @@ export const Analysistables = () => {
       {data.map((dat) => {
         count++;
         return (
-          // <div className="flex flex-col">
-          //   <div
-          //     className={`flex ${
-          //       count % 2 === 0 ? "justify-self-start" : "justify-self-end"
-          //     }`}
-          //   >
-          //     {dat.title}
-          //   </div>
+          <>
           <div
-            className={`flex flex-col gap-3 md:flex-row md:justify-between items-center ${
+            className={`flex flex-col my-5 md:flex-row md:justify-between items-center ${
               count % 2 === 0 && "md:flex-row-reverse"
             }`}
           >
@@ -26,7 +19,7 @@ export const Analysistables = () => {
             </div>
             <div>Graph</div>
           </div>
-          // </div>
+          </>
         );
       })}
     </div>

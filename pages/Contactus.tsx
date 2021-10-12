@@ -4,8 +4,22 @@ import githubicon from "../assets/svg/github.svg";
 import instaicon from "../assets/svg/instagram.svg";
 import twittericon from "../assets/svg/twitter.svg";
 import linkedinicon from "../assets/svg/linkedin.svg";
+import emailjs from 'emailjs-com';
 
 function Contactus() {
+
+  function sendEmail(e:any) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_dzdeni6', 'template_tp1mpw3', e.target, 'user_LlAcvgn5m35GXb0OsAzRT')
+      .then((result) => {
+          console.log(result.text);
+          alert(result.text)
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
   return (
     <div className="bg-background-primary text-white h-auto">
       <Layout>
@@ -14,11 +28,12 @@ function Contactus() {
             <div className="font-extrabold text-3xl md:text-5xl">
               Contact Us
             </div>
-            <form className="flex flex-col gap-4 mt-10">
+            <form className="flex flex-col gap-4 mt-10" onSubmit={sendEmail}>
               <div className="flex items-center">
                 <input
                   id="name"
                   type="text"
+                  name="name"
                   placeholder="Full Name"
                   autoComplete="off"
                   className="w-70 h-10 px-7 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
@@ -28,6 +43,7 @@ function Contactus() {
                 <input
                   id="name"
                   type="email"
+                  name="email"
                   placeholder="Your Email"
                   autoComplete="off"
                   className="w-70 h-10 px-7 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
@@ -36,6 +52,7 @@ function Contactus() {
               <div className="flex items-center">
                 <textarea
                   id="name"
+                  name="message"
                   placeholder="Your Message"
                   autoComplete="off"
                   className="w-80 h-40 px-7 py-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"

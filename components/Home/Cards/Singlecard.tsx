@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const Singlecard = ({ name, url, words, designation }) => {
+export const Singlecard = ({ name, url, words, designation }:any) => {
   return (
     <div className="w-72 md:w-80 text-center h-72 bg-background-card mx-auto sm:mx-0">
       <div className="flex justify-between bg-green-600 bg-opacity-40">
