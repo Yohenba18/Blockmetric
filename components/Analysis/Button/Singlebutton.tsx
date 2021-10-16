@@ -1,4 +1,4 @@
-export const Singlebutton = ({ title }) => {
+export const Singlebutton = ({ title }: any) => {
   const handleclick = () => {
     alert(title);
   };

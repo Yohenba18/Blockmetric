@@ -25,6 +25,7 @@ function Login() {
     securePage();
   }, []);
   return (
+    <>
     <div className="bg-background-primary text-white h-auto">
       <Layout>
         <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 my-5 md:my-10">
@@ -103,6 +104,7 @@ function Login() {
         </div>
       </Layout>
     </div>
+    </>
   );
 }
 

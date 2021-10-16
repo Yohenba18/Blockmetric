@@ -1,5 +1,6 @@
 export default [
   {
+    id: 1,
     title: "Transaction speed",
     column: "Transaction(/sec)",
     data: [
@@ -31,6 +32,7 @@ export default [
     ],
   },
   {
+    id: 2,
     title: "Gas Price",
     column: "Price($)",
     data: [
@@ -62,6 +64,7 @@ export default [
     ],
   },
   {
+    id: 3,
     title: "Hash Rate",
     column: "Hash Rate",
     data: [
@@ -93,6 +96,7 @@ export default [
     ],
   },
   {
+    id: 4,
     title: "Market Size",
     column: "Market size (B)",
     data: [
@@ -124,6 +128,7 @@ export default [
     ],
   },
   {
+    id: 5,
     title: "Users",
     column: "Active Uers",
     data: [

@@ -28,16 +28,16 @@ const Table: React.FC<TableProps> = (props) => {
       }}
     >
       <table className="table-auto mt-10 lg:w-full">
-        <thead className="bg-background-table text-text-secondary">
+        <thead className="bg-background-table text-text-secondary text-sm">
           <tr>{props.children}</tr>
         </thead>
         <tbody>
           {props.data.map((row: any, rowIndex: number) => (
-            <tr key={rowIndex} className="border-separate border-t-2">
+            <tr key={rowIndex} className="border-separate border-background-primary border-t-4">
               {cols.map((col: string, colIndex: number) => (
                 <td
                   key={colIndex}
-                  className="table-cell text-center px-2 py-2 bg-background-table"
+                  className="table-cell text-center px-2 py-2 bg-background-table text-lg"
                 >
                   {row[col]}
                 </td>

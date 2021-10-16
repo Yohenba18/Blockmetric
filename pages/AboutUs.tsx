@@ -1,6 +1,6 @@
 function AboutUs() {
   return (
-    <div>
+    <>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis
       euismod nunc sed ultrices. Sed ultricies elit at ultrices consequat.
       Mauris et ullamcorper eros, in laoreet diam. Pellentesque sed arcu et
@@ -36,7 +36,7 @@ function AboutUs() {
       enim eget dapibus euismod. Aliquam pharetra lacus tincidunt, tincidunt
       felis aliquet, molestie quam. Nullam sed neque at urna consectetur
       sagittis.
-    </div>
+    </>
   );
 }
 

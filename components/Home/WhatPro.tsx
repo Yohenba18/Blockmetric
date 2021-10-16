@@ -10,7 +10,7 @@ export const WhatPro: React.FC = () => {
           </div>
           <div className="grid gap-7 grid-cols-2 max-w-2xl mt-6 md:mt-0">
             {whatprovide.map((provide, index) => (
-              <div className="flex flex-col gap-4 items-center">
+              <div className="flex flex-col gap-4 items-center grayscale hover:grayscale-0 transition duration-300 ">
                 <Image
                   src={provide.image}
                   alt={provide.title}

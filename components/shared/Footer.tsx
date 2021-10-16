@@ -7,6 +7,7 @@ import linkedinicon from "../../assets/svg/linkedin.svg";
 
 const Fotter: React.FC = () => {
   return (
+    <>
     <footer className="bg-navblack">
       <div className="flex flex-col static bottom-0 p-8 px-2 pb-1 md:px-2 md:max-w-7xl mx-auto">
         <div className="flex flex-col mb-4 justify-between md:flex-row">
@@ -89,6 +90,7 @@ const Fotter: React.FC = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 

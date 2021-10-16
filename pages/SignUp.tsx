@@ -8,10 +8,7 @@ import { signIn, getSession } from "next-auth/client";
 import {
   UserIcon,
   MailIcon,
-  LockClosedIcon,
-  CheckIcon,
-  EyeIcon,
-  EyeOffIcon,
+  LockClosedIcon
 } from "@heroicons/react/solid";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -23,7 +20,7 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [cnfpassword, setCnfPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e : any ) => {
     e.preventDefault();
     if (password === cnfpassword) {
       console.log(username, email, password, cnfpassword);
@@ -47,6 +44,7 @@ function SignUp() {
   }, []);
 
   return (
+    <>
     <div className="bg-background-primary text-white h-auto">
       <Layout>
         <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 py-5 md:py-0 my-5 md:my-10">
@@ -161,6 +159,7 @@ function SignUp() {
         </div>
       </Layout>
     </div>
+    </>
   );
 }
 
