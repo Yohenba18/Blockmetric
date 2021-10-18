@@ -4,7 +4,7 @@ export const DropdownAnchor: React.FC<{
   listRef: React.RefObject<HTMLDivElement>;
 }> = (props) => {
   const viewDropdown = () => {
-    ["translate-y-4", "opacity-0"].forEach((value) =>
+    ["translate-y-14", "opacity-0"].forEach((value) =>
       props.listRef.current?.children[0].classList.toggle(value)
     );
   };

@@ -15,6 +15,30 @@ export const Navlinkmobile = ({ router, setShowDrawer, session }: any) => {
   const [showResouces, SetShowResources] = useState(false);
   return (
     <>
+      {!session && (
+        <div className="flex justify-center items-center font-bold gap-1 text-center md:flex-row md:gap-0 ">
+          <Link href="/Login">
+            <a
+              className={router.pathname == "/Login" ? "text-activepurple" : ""}
+            >
+              <div className=" hover:text-green-500 cursor-pointer">LOGIN</div>
+            </a>
+          </Link>
+          <hr className="transform rotate-90 text-white w-12" />
+          <Link href="/SignUp">
+            <div
+              className={
+                router.pathname == "/SignUp"
+                  ? "p-2 md:px-3 border-4 rounded-full border-green-600 cursor-pointer bg-green-600"
+                  : "p-2 md:px-3 border-4 rounded-full border-green-600  hover:bg-green-600 cursor-pointer"
+              }
+            >
+              SIGN IN
+            </div>
+          </Link>
+        </div>
+      )}
+
       {session && (
         <div className="flex items-center">
           <SearchIcon className="absolute ml-2 text-gray-400 h-6 w-6" />

@@ -1,3 +1,4 @@
+import React from "react";
 import Headroom from "react-headroom";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -7,12 +8,14 @@ import { useSession, signOut } from "next-auth/client";
 import Avatar from "react-avatar";
 import { Navlinks } from "./Navlinks";
 import { Navlinkmobile } from "./Navlinkmobile";
+import Dropdown from "../../Dropdown";
 
 export const Navbar: React.FC = () => {
   const router = useRouter();
   const [showDrawer, setShowDrawer] = useState(false);
   const [session, loading] = useSession();
   const [openModal, setOpenModal] = useState(false);
+  const dropRef = React.useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -35,18 +38,23 @@ export const Navbar: React.FC = () => {
               <div className="flex gap-2">
                 {session ? (
                   <>
-                    <Avatar name="Wim Mostmans" size="50" round={true} />
-                    <Link href="/api/auth/signout">
-                      <a
-                        onClick={(e) => {
-                          e.preventDefault();
-                          signOut();
-                        }}
-                      ></a>
-                    </Link>
+                    <Dropdown.Anchor listRef={dropRef}>
+                      <Avatar name="Wim Mostmans" size="50" round={true} onClick={() => setOpenModal(false)} />
+                    </Dropdown.Anchor>
+                    <Dropdown.List ref={dropRef}>
+                      <Link href="/api/auth/signout">
+                        <a
+                          onClick={(e) => {
+                            e.preventDefault();
+                            signOut();
+                          }}
+                          className="text-black"
+                        >Sign Out</a>
+                      </Link>
+                    </Dropdown.List>
                   </>
                 ) : (
-                  <div className="flex flex-col items-center font-bold gap-1 text-center md:flex-row md:gap-0 ">
+                  <div className="hidden md:flex flex-col items-center font-bold gap-1 text-center md:flex-row md:gap-0 ">
                     <Link href="/Login">
                       <a
                         className={
@@ -83,21 +91,20 @@ export const Navbar: React.FC = () => {
                   )}
                 </button>
               </div>
-              
             </div>
           </div>
           {openModal && (
-                <nav className="flex flex-col gap-5  left-0 w-full bg-background-primary mx-auto p-8 pb-0">
-                  <Navlinkmobile
-                    setShowDrawer={setShowDrawer}
-                    router={router}
-                    session={session}
-                  />
-                  <button onClick={() => setOpenModal(!openModal)}>
-                    <ChevronUpIcon className="relative mx-auto text-buttonbg h-8 w-8 transform-gpu transition-transform hover:scale-125 active:scale-90" />
-                  </button>
-                </nav>
-              )}
+            <nav className="flex flex-col gap-5  left-0 w-full bg-background-primary mx-auto p-8 pb-0">
+              <Navlinkmobile
+                setShowDrawer={setShowDrawer}
+                router={router}
+                session={session}
+              />
+              <button onClick={() => setOpenModal(!openModal)}>
+                <ChevronUpIcon className="relative mx-auto text-buttonbg h-8 w-8 transform-gpu transition-transform hover:scale-125 active:scale-90" />
+              </button>
+            </nav>
+          )}
         </header>
       </Headroom>
     </>
