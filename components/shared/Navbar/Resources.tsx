@@ -18,7 +18,7 @@ export const Resources = ({ setShowDrawer, mobile }: any) => {
                       router.pathname === "/Community"
                         ? "text-activepurple"
                         : ""
-                    }${mobile && "ml-5"}`}
+                    } ${mobile && "ml-5"}`}
           >
             Community
           </a>
@@ -32,7 +32,7 @@ export const Resources = ({ setShowDrawer, mobile }: any) => {
                       router.pathname === "/Contactus"
                         ? "text-activepurple"
                         : ""
-                    }${mobile && "ml-5"}`}
+                    } ${mobile && "ml-5"}`}
           >
             Contact Us
           </a>
@@ -42,7 +42,7 @@ export const Resources = ({ setShowDrawer, mobile }: any) => {
           <a
             onClick={(e) => setShowDrawer(false)}
             className={`hover:text-green-500 cursor-pointer
-                    ${router.pathname === "/Apis" ? "text-activepurple" : ""}${
+                    ${router.pathname === "/Apis" ? "text-activepurple" : ""} ${
               mobile && "ml-5"
             }`}
           >

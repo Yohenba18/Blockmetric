@@ -28,8 +28,8 @@ function Login() {
     <>
     <div className="bg-background-primary text-white h-auto">
       <Layout>
-        <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 my-5 md:my-10">
-          <div className="bg-gradient-to-r from-gradientpurple py-10 md:p-10 md:py-20 text-center">
+        <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 my-10">
+          <div className="bg-gradient-to-r from-gradientpurple  md:p-10 py-20 text-center">
             <div className="font-extrabold text-3xl md:text-4xl">Login</div>
             <div className="mt-5 flex justify-center gap-8">
               <div className="h-10 w-10 cursor-pointer">

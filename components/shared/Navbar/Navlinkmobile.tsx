@@ -10,9 +10,20 @@ import {
   ViewGridIcon,
 } from "@heroicons/react/solid";
 import { Resources } from "./Resources";
+import { motion, motionValue } from "framer-motion";
 
 export const Navlinkmobile = ({ router, setShowDrawer, session }: any) => {
   const [showResouces, SetShowResources] = useState(false);
+
+  const menuvariants = {
+    opened: {
+      top: 0,
+    },
+    closed: {
+      top: "-90vh",
+    },
+  };
+
   return (
     <>
       {!session && (
@@ -82,7 +93,7 @@ export const Navlinkmobile = ({ router, setShowDrawer, session }: any) => {
               className={`flex gap-4 text-gray-300
                       ${
                         router.pathname === "/Product"
-                          ? "text-activepurple border-b-2 border-activepurple"
+                          ? "text-activepurple "
                           : ""
                       }`}
             >
@@ -92,7 +103,6 @@ export const Navlinkmobile = ({ router, setShowDrawer, session }: any) => {
           </Link>
         </>
       )}
-
       <div>
         <button
           onClick={() => SetShowResources(!showResouces)}
