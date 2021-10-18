@@ -14,10 +14,10 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
       <Link href="/">
         <a
           onClick={(e) => setShowDrawer(false)}
-          className={`hover:text-green-500
+          className={`
                 ${
-                  router.pathname === "/" &&
-                  "text-activepurple border-b-2 border-activepurple"
+                  router.pathname === "/" ?
+                  "text-activepurple border-b-2 border-activepurple": "hover:text-white"
                 }`}
         >
           Home
@@ -26,11 +26,11 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
       <Link href="/Analysis">
         <a
           onClick={(e) => setShowDrawer(false)}
-          className={`hover:text-green-500
+          className={`
                 ${
                   router.pathname === "/Analysis"
                     ? "text-activepurple border-b-2 border-activepurple"
-                    : ""
+                    : "hover:text-white"
                 }`}
         >
           Analytics
@@ -39,11 +39,11 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
       <Link href="/Product">
         <a
           onClick={(e) => setShowDrawer(false)}
-          className={`hover:text-green-500
+          className={`
                 ${
                   router.pathname === "/Product"
                     ? "text-activepurple border-b-2 border-activepurple"
-                    : ""
+                    : "hover:text-white"
                 }`}
         >
           Product
@@ -54,7 +54,7 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
           onClick={() => SetShowResources(!showResouces)}
           className="flex cursor-pointer items-center"
         >
-          <div className="hover:text-green-500">Resources</div>
+          <div className="hover:text-white ">Resources</div>
           {showResouces ? (
             <ChevronUpIcon className="text-white h-6 w-6 transform-gpu transition-transform hover:scale-125 active:scale-90" />
           ) : (

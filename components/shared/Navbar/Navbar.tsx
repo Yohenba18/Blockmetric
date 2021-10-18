@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
               </Link>
             </div>
             <div className="flex gap-5 items-center">
-              <nav className="hidden lg:flex gap-10 items-center">
+              <nav className="hidden lg:flex gap-10 items-center text-gray-300">
                 <Navlinks
                   setShowDrawer={setShowDrawer}
                   router={router}
