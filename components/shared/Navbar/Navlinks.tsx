@@ -16,9 +16,8 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
           onClick={(e) => setShowDrawer(false)}
           className={`hover:text-green-500
                 ${
-                  router.pathname === "/"
-                    && "text-activepurple border-b-2 border-activepurple"
-                    
+                  router.pathname === "/" &&
+                  "text-activepurple border-b-2 border-activepurple"
                 }`}
         >
           Home
@@ -57,13 +56,17 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
         >
           <div className="hover:text-green-500">Resources</div>
           {showResouces ? (
-            <ChevronDownIcon className="text-white h-6 w-6 transform-gpu transition-transform hover:scale-125 active:scale-90" />
-          ) : (
             <ChevronUpIcon className="text-white h-6 w-6 transform-gpu transition-transform hover:scale-125 active:scale-90" />
+          ) : (
+            <ChevronDownIcon className="text-white h-6 w-6 transform-gpu transition-transform hover:scale-125 active:scale-90" />
           )}
         </button>
         {showResouces && (
-          <Resources setShowDrawer={setShowDrawer} router={router} mobile={false}/>
+          <Resources
+            setShowDrawer={setShowDrawer}
+            router={router}
+            mobile={false}
+          />
         )}
       </div>
       <div className="flex items-center">

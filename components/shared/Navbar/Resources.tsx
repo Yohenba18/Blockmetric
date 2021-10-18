@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-export const Resources = ({ router, setShowDrawer, mobile }: any) => {
+export const Resources = ({ setShowDrawer, mobile }: any) => {
+  const router = useRouter();
   return (
     <>
       <div
@@ -14,7 +16,7 @@ export const Resources = ({ router, setShowDrawer, mobile }: any) => {
             className={`hover:text-green-500 cursor-pointer
                     ${
                       router.pathname === "/Community"
-                        ? "text-activepurple border-b-2 border-activepurple pb-2"
+                        ? "text-activepurple"
                         : ""
                     }${mobile && "ml-5"}`}
           >
@@ -28,7 +30,7 @@ export const Resources = ({ router, setShowDrawer, mobile }: any) => {
             className={`hover:text-green-500 cursor-pointer
                     ${
                       router.pathname === "/Contactus"
-                        ? "text-activepurple border-b-2 border-activepurple pb-2"
+                        ? "text-activepurple"
                         : ""
                     }${mobile && "ml-5"}`}
           >
@@ -40,11 +42,9 @@ export const Resources = ({ router, setShowDrawer, mobile }: any) => {
           <a
             onClick={(e) => setShowDrawer(false)}
             className={`hover:text-green-500 cursor-pointer
-                    ${
-                      router.pathname === "/Apis"
-                        ? "text-activepurple border-b-2 border-activepurple pb-2"
-                        : ""
-                    }${mobile && "ml-5"}`}
+                    ${router.pathname === "/Apis" ? "text-activepurple" : ""}${
+              mobile && "ml-5"
+            }`}
           >
             APIs
           </a>
