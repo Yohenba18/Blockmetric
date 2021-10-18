@@ -15,7 +15,7 @@ import { useSession, signOut } from "next-auth/client";
 const Navbar: React.FC = () => {
   const [session, loading] = useSession();
   const [openModal, setOpenModal] = useState(false);
-  const [user, setUser] = useState(false);
+  
   function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
     return {

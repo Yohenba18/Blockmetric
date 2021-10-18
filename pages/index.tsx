@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <div className="bg-background-primary text-white h-auto">
         <Layout>
-          <div className="text-center h-96 py-20 flex flex-col justify-center px-5 bg-gradient-to-b from-background-secondary2">
+          <div className="text-center h-96 flex flex-col justify-center px-5 bg-gradient-to-b from-background-secondary2">
             <div className="font-extrabold text-5xl md:text-7xl">
               <h1>BlockMetric</h1>
             </div>
@@ -26,7 +26,7 @@ export default function Home() {
             <div className="font-bold text-2xl md:text-4xl">
               <h1>OVERALL RANKING</h1>
             </div>
-            <Tableshow />
+            {/*<Tableshow />*/}
           </div>
           <div className="items-center flex flex-col md:flex-row md:justify-between h-auto max-w-7xl mx-auto">
             <div className="flex align-center h-50 w-50 md:h-100 md:w-100 p-5">
