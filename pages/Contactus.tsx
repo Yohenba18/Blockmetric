@@ -33,7 +33,7 @@ function Contactus() {
       <div className="bg-background-primary text-white h-auto">
         <Layout>
           <div className="bg-gradient-to-r from-gradientpurple mx-2xl mx-auto md:flex md:justify-evenly gap-20">
-            <div className=" md:p-10 py-20 flex flex-col items-center md:items-start">
+            <div className="py-36 md:p-10 flex flex-col items-center md:items-start">
               <div className="font-extrabold text-3xl md:text-5xl">
                 Contact Us
               </div>

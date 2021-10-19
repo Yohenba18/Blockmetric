@@ -39,7 +39,12 @@ export const Navbar: React.FC = () => {
                 {session ? (
                   <>
                     <Dropdown.Anchor listRef={dropRef}>
-                      <Avatar name="Wim Mostmans" size="50" round={true} onClick={() => setOpenModal(false)} />
+                      <Avatar
+                        name="Wim Mostmans"
+                        size="50"
+                        round={true}
+                        onClick={() => setOpenModal(false)}
+                      />
                     </Dropdown.Anchor>
                     <Dropdown.List ref={dropRef}>
                       <Link href="/api/auth/signout">
@@ -49,12 +54,14 @@ export const Navbar: React.FC = () => {
                             signOut();
                           }}
                           className="text-black"
-                        >Sign Out</a>
+                        >
+                          Sign Out
+                        </a>
                       </Link>
                     </Dropdown.List>
                   </>
                 ) : (
-                  <div className="hidden md:flex flex-col items-center font-bold gap-1 text-center md:flex-row md:gap-0 ">
+                  <div className="hidden flex-col items-center font-bold gap-0 text-center lg:flex lg:flex-row ">
                     <Link href="/Login">
                       <a
                         className={
@@ -69,11 +76,13 @@ export const Navbar: React.FC = () => {
                     <hr className="transform rotate-90 text-white w-12" />
                     <Link href="/SignUp">
                       <div
-                        className={
-                          router.pathname == "/SignUp"
-                            ? "p-2 md:px-3 border-4 rounded-full border-green-600 cursor-pointer bg-green-600"
-                            : "p-2 md:px-3 border-4 rounded-full border-green-600  hover:bg-green-600 cursor-pointer"
-                        }
+                        className={`p-2 md:px-3 border-4 rounded-full border-green-600 cursor-pointer
+                          ${
+                            router.pathname == "/SignUp"
+                              ? "bg-green-600"
+                              : " hover:bg-green-600 "
+                          }
+                        `}
                       >
                         SIGN IN
                       </div>

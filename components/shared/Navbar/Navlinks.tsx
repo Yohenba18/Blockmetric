@@ -16,39 +16,44 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
           onClick={(e) => setShowDrawer(false)}
           className={`
                 ${
-                  router.pathname === "/" ?
-                  "text-activepurple border-b-2 border-activepurple": "hover:text-white"
+                  router.pathname === "/"
+                    ? "text-activepurple border-b-2 border-activepurple"
+                    : "hover:text-white"
                 }`}
         >
           Home
         </a>
       </Link>
-      <Link href="/Analysis">
-        <a
-          onClick={(e) => setShowDrawer(false)}
-          className={`
+      {session && (
+        <>
+          <Link href="/Analysis">
+            <a
+              onClick={(e) => setShowDrawer(false)}
+              className={`
                 ${
                   router.pathname === "/Analysis"
                     ? "text-activepurple border-b-2 border-activepurple"
                     : "hover:text-white"
                 }`}
-        >
-          Analytics
-        </a>
-      </Link>
-      <Link href="/Product">
-        <a
-          onClick={(e) => setShowDrawer(false)}
-          className={`
+            >
+              Analytics
+            </a>
+          </Link>
+          <Link href="/Product">
+            <a
+              onClick={(e) => setShowDrawer(false)}
+              className={`
                 ${
                   router.pathname === "/Product"
                     ? "text-activepurple border-b-2 border-activepurple"
                     : "hover:text-white"
                 }`}
-        >
-          Product
-        </a>
-      </Link>
+            >
+              Product
+            </a>
+          </Link>
+        </>
+      )}
       <div>
         <button
           onClick={() => SetShowResources(!showResouces)}
