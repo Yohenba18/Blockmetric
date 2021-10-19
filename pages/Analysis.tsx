@@ -15,7 +15,7 @@ function Analysis() {
       const session = await getSession();
       if (!session) {
         alert("You are not Logged in");
-        router.push("/SignUp");
+        router.push("/Login");
       } else {
         setLoading(false);
       }

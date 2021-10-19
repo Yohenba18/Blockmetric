@@ -27,7 +27,7 @@ export const Navlinkmobile = ({ router, setShowDrawer, session }: any) => {
   return (
     <>
       {!session && (
-        <div className="flex justify-center items-center font-bold gap-1 text-center md:flex-row md:gap-0 ">
+        <div className="flex justify-center items-center font-bold gap-1 text-center  md:gap-0 ">
           <Link href="/Login">
             <a
               className={router.pathname == "/Login" ? "text-activepurple" : ""}

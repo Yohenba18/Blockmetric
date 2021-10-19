@@ -1,5 +1,6 @@
 import { SingleTable } from "./SingleTable";
 import data from "../../../data/Analysis";
+import { Graph } from "../../Graph/Graph";
 
 export const Analysistables = () => {
   return (
@@ -7,16 +8,18 @@ export const Analysistables = () => {
       {data.map((dat) => {
         return (
           <>
-          <div
-            className={`flex flex-col my-5 md:flex-row md:justify-between items-center ${
-              dat.id % 2 === 0 && "md:flex-row-reverse"
-            }`}
-          >
-            <div className="w-1/2">
-              <SingleTable data={dat} />
+            <div
+              className={`flex flex-col my-5 md:flex-row md:justify-between items-center ${
+                dat.id % 2 === 0 && "md:flex-row-reverse"
+              }`}
+            >
+              <div className="w-1/2">
+                <SingleTable data={dat} />
+              </div>
+              <div className="px-36">
+                <Graph />
+              </div>
             </div>
-            <div>Graph</div>
-          </div>
           </>
         );
       })}
