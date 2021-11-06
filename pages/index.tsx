@@ -26,7 +26,7 @@ export default function Home() {
             <div className="font-bold text-2xl md:text-4xl text-center md:text-left">
               <h1>OVERALL RANKING</h1>
             </div>
-            <Tableshow />
+            {/* <Tableshow /> */}
           </div>
           <div className="items-center flex flex-col md:flex-row md:justify-between h-auto max-w-7xl mx-auto">
             <div className="hidden md:flex align-center h-50 w-50 md:h-100 md:w-100 p-5">
@@ -54,3 +54,4 @@ export default function Home() {
     </>
   );
 }
+
