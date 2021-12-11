@@ -6,7 +6,7 @@ interface ContextType {
 }
 
 export interface TableProps {
-  data: any[];
+  data: any;
 }
 
 export const TableContext = createContext<ContextType>({

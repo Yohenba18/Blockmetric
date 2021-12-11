@@ -6,11 +6,10 @@ import { Button } from "../components/Analysis/Button/Button";
 import { useRouter } from "next/router";
 import { Analysistables } from "../components/Analysis/Tables/Analysistables";
 
-function Analysis({coinsData}) {
+function Analysis({ coinsData, data }: any) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
-  console.log(coinsData)
-
+  console.log(coinsData);
 
   useEffect(() => {
     const securePage = async () => {
@@ -36,7 +35,7 @@ function Analysis({coinsData}) {
           <div className=" bg-gradient-to-b from-background-secondary2">
             <div className="max-w-7xl mx-auto py-10 ">
               <div className="font-bold text-2xl md:text-4xl my-5">Ranking</div>
-              <Tableshow />
+              <Tableshow data={data} />
             </div>
           </div>
           <div className="max-w-7xl mx-auto">
@@ -45,7 +44,7 @@ function Analysis({coinsData}) {
             </div>
             <Button />
           </div>
-          <Analysistables coinsData = {coinsData}/>
+          <Analysistables coinsData={coinsData} />
         </Layout>
       </div>
     </>
@@ -55,11 +54,14 @@ function Analysis({coinsData}) {
 export async function getServerSideProps() {
   const res = await fetch(
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false`
-  )
-
+  );
   const coinsData = await res.json();
+
+  const result = await fetch("http://localhost:5000/api/v1/");
+  const data = await result.json();
+  console.log(data);
   return {
-    props: { coinsData },
+    props: { coinsData, data },
   };
 }
 
