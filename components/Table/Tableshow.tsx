@@ -6,22 +6,9 @@ import useSWR from "swr";
 import axios from "axios";
 
 const Tableshow = ({ data }: any) => {
-  // const { data, error } = useSWR("http://localhost:5000/api/v1/", fetcher);
-  // if (error) return <div>failed to load</div>;
-  // console.log(data);
-  // if (!data) {
-  //   return <h1>loading...</h1>;
-  // }
-  // const [data, setData] = useState();
-
-  // useEffect(() => {
-  //   async () => {
-  //     const result = await fetch("http://localhost:5000/api/v1/");
-  //     const resultjson = await result.json();
-  //     console.log(resultjson);
-  //     setData(resultjson);
-  //   };
-  // });
+  if(!data){
+    return <h1>Loading</h1>
+  }
 
   return (
     <Table data={data}>

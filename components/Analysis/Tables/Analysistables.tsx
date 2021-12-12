@@ -2,12 +2,12 @@ import { SingleTable } from "./SingleTable";
 import data from "../../../data/Analysis";
 import { Graph } from "../../Graph/Graph";
 import Table, { Column } from "../../Table/index";
-import { useState } from "react";
 
-export const Analysistables = ({ coinsData }:any) => {
-  coinsData.filter((coin:any) => {
-    return (coin.market_cap = Math.floor(coin.market_cap / 1000000000));
-  });
+
+export const Analysistables = () => {
+  // coinsData.filter((coin:any) => {
+  //   return (coin.market_cap = Math.floor(coin.market_cap / 1000000000));
+  // });
 
 
   return (
@@ -30,7 +30,7 @@ export const Analysistables = ({ coinsData }:any) => {
           </>
         );
       })}
-      <div
+      {/* <div
         className={`flex flex-col my-5 md:justify-between items-center md:flex-row-reverse `}
       >
         <div className="w-1/2">
@@ -45,7 +45,7 @@ export const Analysistables = ({ coinsData }:any) => {
         <div className="px-36">
           <Graph />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

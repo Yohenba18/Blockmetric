@@ -5,9 +5,19 @@ import Blogcards from "../components/Home/Cards/Blogcards";
 import Layout from "../components/shared/Layout";
 import { WhatPro } from "../components/Home/WhatPro";
 import Tableshow from "../components/Table/Tableshow";
-import axios from "axios";
+import useSWR from "swr";
 
-export default function Home({ data }: any) {
+// const fetcher = async () => {
+//   const result = await fetch("http://localhost:5000/api/v1/");
+//   const data = await result.json();
+//   console.log(data);
+//   return data;
+// };
+
+export default function Home({data}: any) {
+  // const { data, error } = useSWR("alldatta", fetcher);
+  // if (error) return <div>failed to load</div>;
+  // console.log(data);
   return (
     <>
       <div className="bg-background-primary text-white h-auto">
