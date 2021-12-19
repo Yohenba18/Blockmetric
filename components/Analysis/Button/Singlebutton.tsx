@@ -6,7 +6,7 @@ export const Singlebutton = ({ title }: any) => {
   return (
     <>
       <button
-        className=" bg-background-secondary2 hover:bg-activepurple rounded-md px-6 py-2"
+        className=" bg-background-secondary2 hover:bg-activepurple rounded-md px-6 py-2 "
         onClick={handleclick}
       >
         {title}

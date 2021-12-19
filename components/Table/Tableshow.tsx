@@ -1,17 +1,43 @@
 import Table, { Column } from "./index";
 import alldata from "../../data/Tabledata";
-// import { getAllData } from "../../pages/api/api";
+import { getAllData } from "../../pages/api/api";
 import { useEffect, useState } from "react";
 import useSWR from "swr";
-import axios from "axios";
 
-const Tableshow = ({ data }: any) => {
-  if(!data){
-    return <h1>Loading</h1>
-  }
+// const fetcher = async () => {
+//   const result = await fetch("http://localhost:5000/api/v1/");
+//   const data = await result.json();
+//   console.log(data);
+//   return data;
+// };
+// { data }: any
+const Tableshow = () => {
+  // const { data, error } = useSWR("alldatta", fetcher);
+  // if (error) return <div>failed to load</div>;
+  // console.log(data);
+
+  // const [data, setData] = useState();
+
+  // useEffect(() => {
+  //   const fetcher = async () => {
+  //     try {
+  //       const result = await fetch("http://localhost:5000/api/v1/");
+  //       const newdata = await result.json();
+  //       setData(newdata);
+  //       console.log(newdata);
+  //     } catch (e) {
+  //       console.log(e);
+  //     }
+  //   };
+  //   fetcher();
+  // }, []);
+
+  // if (!data) {
+  //   return <h1>Loading</h1>;
+  // }
 
   return (
-    <Table data={data}>
+    <Table data={getAllData}>
       <Column title="Name" colId="name" />
       <Column title="Protocol" colId="protocol" />
       <Column title="Transaction(/sec)" colId="transaction" />

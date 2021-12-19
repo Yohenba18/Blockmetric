@@ -1,9 +1,11 @@
-import friendly from "../assets/photo/friendly.png";
+import friendly from "../assets/photo/friendly.jpg";
+import detailanalysis   from "../assets/photo/detailanalysis.jpg";
+import communitysupport   from "../assets/photo/communitysupport.jpg";
 
 export default[
   {
     id:0,
-    image: friendly,
+    image: detailanalysis,
     title: "Detail analysis",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
@@ -15,7 +17,7 @@ export default[
   },
   {
     id:2,
-    image: friendly,
+    image: communitysupport,
     title: "Community support and trust",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },

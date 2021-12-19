@@ -28,7 +28,7 @@ const Table: React.FC<TableProps> = (props) => {
       }}
     >
       <table className="table-auto mt-10 lg:w-full">
-        <thead className="bg-background-table text-text-secondary text-sm">
+        <thead className="bg-background-table text-text-secondary text-sm ">
           <tr>{props.children}</tr>
         </thead>
         <tbody>

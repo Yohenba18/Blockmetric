@@ -9,6 +9,15 @@ import Avatar from "react-avatar";
 import { Navlinks } from "./Navlinks";
 import { Navlinkmobile } from "./Navlinkmobile";
 import Dropdown from "../../Dropdown";
+import { motion } from "framer-motion";
+
+const variants = {
+  hidden: { opacity: 0, y: "-100%" },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 export const Navbar: React.FC = () => {
   const router = useRouter();
@@ -22,7 +31,7 @@ export const Navbar: React.FC = () => {
       <Headroom wrapperStyle={{ height: "90px" }} style={{ height: "90px" }}>
         <header className="bg-background-primary px-5 md:px-10 py-5">
           <div className="flex items-center justify-between align-middle ">
-            <div className="text-3xl font-semibold md:text-3xl lg-text-4xl">
+            <div className="text-3xl font-semibold md:text-3xl lg-text-4xl font-heading tracking-wide">
               <Link href="/">
                 <h1 className="cursor-pointer">Blockmetric</h1>
               </Link>
@@ -103,7 +112,11 @@ export const Navbar: React.FC = () => {
             </div>
           </div>
           {openModal && (
-            <nav className="flex flex-col gap-5  left-0 w-full bg-background-primary mx-auto p-8 pb-0">
+            <motion.nav
+              className="flex flex-col gap-5  left-0 w-full bg-background-primary mx-auto p-8 pb-0"
+              animate={openModal ? "visible" : "hidden"}
+              variants={variants}
+            >
               <Navlinkmobile
                 setShowDrawer={setShowDrawer}
                 router={router}
@@ -112,7 +125,7 @@ export const Navbar: React.FC = () => {
               <button onClick={() => setOpenModal(!openModal)}>
                 <ChevronUpIcon className="relative mx-auto text-buttonbg h-8 w-8 transform-gpu transition-transform hover:scale-125 active:scale-90" />
               </button>
-            </nav>
+            </motion.nav>
           )}
         </header>
       </Headroom>

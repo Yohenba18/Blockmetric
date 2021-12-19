@@ -1,32 +1,21 @@
 import Image from "next/image";
 import analysis from "../assets/photo/analysis.jpg";
-
 import Blogcards from "../components/Home/Cards/Blogcards";
 import Layout from "../components/shared/Layout";
 import { WhatPro } from "../components/Home/WhatPro";
 import Tableshow from "../components/Table/Tableshow";
-import useSWR from "swr";
-
-// const fetcher = async () => {
-//   const result = await fetch("http://localhost:5000/api/v1/");
-//   const data = await result.json();
-//   console.log(data);
-//   return data;
-// };
 
 export default function Home({data}: any) {
-  // const { data, error } = useSWR("alldatta", fetcher);
-  // if (error) return <div>failed to load</div>;
-  // console.log(data);
+
   return (
     <>
       <div className="bg-background-primary text-white h-auto">
         <Layout>
           <div className="text-center h-96 flex flex-col justify-center px-5 bg-gradient-to-b from-background-secondary2">
-            <div className="font-extrabold text-5xl md:text-7xl">
+            <div className="font-extrabold text-5xl md:text-8xl font-heading">
               <h1>BlockMetric</h1>
             </div>
-            <div className="text-gray-300 text-xl mt-4">
+            <div className="text-gray-300 text-2xl mt-4 font-sans">
               <p>
                 Analyse your perfomance with the real time data of the exisiting
                 blockchains
@@ -34,10 +23,11 @@ export default function Home({data}: any) {
             </div>
           </div>
           <div className="max-w-7xl mx-auto items-center md:items-start h-96">
-            <div className="font-bold text-2xl md:text-4xl text-center md:text-left">
+            <div className="font-bold text-2xl md:text-4xl text-center md:text-left font-heading tracking-wide">
               <h1>OVERALL RANKING</h1>
             </div>
-            <Tableshow data={data} />
+            {/* data={data} */}
+            {/* <Tableshow  /> */}
           </div>
           <div className="items-center flex flex-col md:flex-row md:justify-between h-auto max-w-7xl mx-auto">
             <div className="hidden md:flex align-center h-50 w-50 md:h-100 md:w-100 p-5">
@@ -66,12 +56,12 @@ export default function Home({data}: any) {
   );
 }
 
-export async function getServerSideProps() {
-  const result = await fetch("http://localhost:5000/api/v1/");
-  const data = await result.json();
-  console.log(data);
+// export async function getServerSideProps() {
+//   const result = await fetch("http://localhost:5000/api/v1/");
+//   const data = await result.json();
+//   console.log(data);
 
-  return {
-    props: { data },
-  };
-}
+//   return {
+//     props: { data },
+//   };
+// }

@@ -11,10 +11,7 @@ module.exports = {
           secondary1: "#193766",
           secondary2: "#7951A8",
           card: "#0B0C0F",
-          table: "#1A1A1A"
-        },
-        text: {
-          secondary: "#C4C4C4",
+          table: "#1A1A1A",
         },
         navblack: "#232323",
         bordergreen: "#00B13B",
@@ -25,6 +22,12 @@ module.exports = {
         purplebg: "#322145",
         cardbg: "#0B0C0F",
         buttonbg: "#20B2AA",
+        text: {
+          secondary: "#C4C4C4",
+        },
+      },
+      fontFamily: {
+        heading: ["Khand"],
       },
     },
   },

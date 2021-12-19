@@ -6,10 +6,9 @@ import { Button } from "../components/Analysis/Button/Button";
 import { useRouter } from "next/router";
 import { Analysistables } from "../components/Analysis/Tables/Analysistables";
 
-function Analysis({ coinsData, data }: any) {
+function Analysis({ data, analysisData }: any) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
-  console.log(coinsData);
 
   useEffect(() => {
     const securePage = async () => {
@@ -34,17 +33,20 @@ function Analysis({ coinsData, data }: any) {
         <Layout>
           <div className=" bg-gradient-to-b from-background-secondary2">
             <div className="max-w-7xl mx-auto py-10 ">
-              <div className="font-bold text-2xl md:text-4xl my-5">Ranking</div>
-              <Tableshow data={data} />
+              <div className="font-bold text-2xl md:text-5xl my-5 font-heading tracking-wide">
+                Ranking
+              </div>
+{/* data={data}  */}
+              <Tableshow />
             </div>
           </div>
           <div className="max-w-7xl mx-auto">
-            <div className="font-bold text-2xl md:text-4xl my-5 text-center">
+            <div className="font-bold text-2xl md:text-5xl my-5 text-center font-heading tracking-wide">
               Detail Analysis
             </div>
             <Button />
           </div>
-          <Analysistables />
+          <Analysistables data={analysisData}/>
         </Layout>
       </div>
     </>
@@ -54,9 +56,25 @@ function Analysis({ coinsData, data }: any) {
 export async function getServerSideProps() {
   const result = await fetch("http://localhost:5000/api/v1/");
   const data = await result.json();
+
+  const analysisData = [];
+  const transactionData = await fetch(
+    "http://localhost:5000/api/v1/Transaction"
+  );
+  analysisData.push(await transactionData.json());
+  const developersData = await fetch("http://localhost:5000/api/v1/Developers");
+  analysisData.push(await developersData.json());
+  const marketData = await fetch("http://localhost:5000/api/v1/Price");
+  analysisData.push(await marketData.json());
+
+  for(var i in analysisData){
+    analysisData[i].id = i;
+  }
+
   console.log(data);
+  console.log(analysisData);
   return {
-    props: { data },
+    props: { data, analysisData },
   };
 }
 
