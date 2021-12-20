@@ -1,6 +1,7 @@
 import React from "react";
 import Headroom from "react-headroom";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { MenuIcon, XIcon, ChevronUpIcon } from "@heroicons/react/solid";
@@ -10,6 +11,7 @@ import { Navlinks } from "./Navlinks";
 import { Navlinkmobile } from "./Navlinkmobile";
 import Dropdown from "../../Dropdown";
 import { motion } from "framer-motion";
+import bm from "../../../assets/photo/BM.png";
 
 const variants = {
   hidden: { opacity: 0, y: "-100%" },
@@ -31,9 +33,11 @@ export const Navbar: React.FC = () => {
       <Headroom wrapperStyle={{ height: "90px" }} style={{ height: "90px" }}>
         <header className="bg-background-primary px-5 md:px-10 py-5">
           <div className="flex items-center justify-between align-middle ">
-            <div className="text-3xl font-semibold md:text-3xl lg-text-4xl font-heading tracking-wide">
+            <div className="text-3xl font-semibold md:text-3xl font-heading tracking-wide">
               <Link href="/">
-                <h1 className="cursor-pointer">Blockmetric</h1>
+                <h1 className="cursor-pointer">
+                  {/* <Image src={bm} /> */}Blockmetric
+                </h1>
               </Link>
             </div>
             <div className="flex gap-5 items-center">

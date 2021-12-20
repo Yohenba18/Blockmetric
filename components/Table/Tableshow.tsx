@@ -16,25 +16,25 @@ const Tableshow = () => {
   // if (error) return <div>failed to load</div>;
   // console.log(data);
 
-  // const [data, setData] = useState();
+  const [data, setData] = useState();
 
-  // useEffect(() => {
-  //   const fetcher = async () => {
-  //     try {
-  //       const result = await fetch("http://localhost:5000/api/v1/");
-  //       const newdata = await result.json();
-  //       setData(newdata);
-  //       console.log(newdata);
-  //     } catch (e) {
-  //       console.log(e);
-  //     }
-  //   };
-  //   fetcher();
-  // }, []);
+  useEffect(() => {
+    const fetcher = async () => {
+      try {
+        const result = await fetch("http://localhost:5000/api/v1/");
+        const newdata = await result.json();
+        setData(newdata);
+        console.log(newdata);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetcher();
+  }, []);
 
-  // if (!data) {
-  //   return <h1>Loading</h1>;
-  // }
+  if (!data) {
+    return <h1>Loading</h1>;
+  }
 
   return (
     <Table data={getAllData}>
