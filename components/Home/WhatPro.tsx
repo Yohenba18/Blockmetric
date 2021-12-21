@@ -12,7 +12,7 @@ export const WhatPro: React.FC = () => {
           {whatprovide.map((provide, index) => (
             <div className="flex flex-col gap-4 items-center">
               <div className="overflow-hidden w-8/12 xs:w-8/12 sm:w-3/5">
-                <div className=" hover:scale-125 transition duration-300">
+                <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
                   <Image
                     src={provide.image}
                     alt={provide.title}

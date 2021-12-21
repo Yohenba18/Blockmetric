@@ -11,7 +11,7 @@ import { Navlinks } from "./Navlinks";
 import { Navlinkmobile } from "./Navlinkmobile";
 import Dropdown from "../../Dropdown";
 import { motion } from "framer-motion";
-import bm from "../../../assets/photo/BM.png";
+import Blockmetric from "../../../assets/svg/Blockmetric.svg";
 
 const variants = {
   hidden: { opacity: 0, y: "-100%" },
@@ -35,9 +35,12 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center justify-between align-middle ">
             <div className="text-3xl font-semibold md:text-3xl font-heading tracking-wide">
               <Link href="/">
-                <h1 className="cursor-pointer">
-                  {/* <Image src={bm} /> */}Blockmetric
-                </h1>
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Image src={Blockmetric} className="cursor-pointer" />
+                </motion.div>
               </Link>
             </div>
             <div className="flex gap-5 items-center">
