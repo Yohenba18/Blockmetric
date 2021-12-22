@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
             <div className="text-3xl font-semibold md:text-3xl font-heading tracking-wide">
               <Link href="/">
                 <motion.div
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.3, originX: 0 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <Image src={Blockmetric} className="cursor-pointer" />

@@ -10,34 +10,14 @@ import useSWR from "swr";
 //   console.log(data);
 //   return data;
 // };
-// { data }: any
-const Tableshow = () => {
+// 
+const Tableshow = ({ data }: any) => {
   // const { data, error } = useSWR("alldatta", fetcher);
   // if (error) return <div>failed to load</div>;
   // console.log(data);
 
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    const fetcher = async () => {
-      try {
-        const result = await fetch("http://localhost:5000/api/v1/");
-        const newdata = await result.json();
-        setData(newdata);
-        console.log(newdata);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetcher();
-  }, []);
-
-  if (!data) {
-    return <h1>Loading</h1>;
-  }
-
   return (
-    <Table data={getAllData}>
+    <Table data={data}>
       <Column title="Name" colId="name" />
       <Column title="Protocol" colId="protocol" />
       <Column title="Transaction(/sec)" colId="transaction" />

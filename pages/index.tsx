@@ -5,8 +5,7 @@ import Layout from "../components/shared/Layout";
 import { WhatPro } from "../components/Home/WhatPro";
 import Tableshow from "../components/Table/Tableshow";
 
-export default function Home({data}: any) {
-
+export default function Home({ data }: any) {
   return (
     <>
       <div className="bg-background-primary text-white h-auto">
@@ -26,8 +25,7 @@ export default function Home({data}: any) {
             <div className="font-bold text-2xl md:text-4xl text-center md:text-left font-heading tracking-wide">
               <h1>OVERALL RANKING</h1>
             </div>
-            {/* data={data} */}
-            {/* <Tableshow  /> */}
+            <Tableshow data={data} />
           </div>
           <div className="items-center flex flex-col md:flex-row md:justify-between h-auto max-w-7xl mx-auto">
             <div className="hidden md:flex align-center h-50 w-50 md:h-100 md:w-100 p-5">
@@ -56,12 +54,12 @@ export default function Home({data}: any) {
   );
 }
 
-// export async function getServerSideProps() {
-//   const result = await fetch("http://localhost:5000/api/v1/");
-//   const data = await result.json();
-//   console.log(data);
+export async function getServerSideProps() {
+  const result = await fetch("http://localhost:5000/api/v1/");
+  const data = await result.json();
+  console.log(data);
 
-//   return {
-//     props: { data },
-//   };
-// }
+  return {
+    props: { data },
+  };
+}

@@ -10,6 +10,8 @@ function Analysis({ data, analysisData }: any) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
 
+  console.log(analysisData);
+
   useEffect(() => {
     const securePage = async () => {
       const session = await getSession();
@@ -36,17 +38,18 @@ function Analysis({ data, analysisData }: any) {
               <div className="font-bold text-2xl md:text-5xl my-5 font-heading tracking-wide">
                 Ranking
               </div>
-{/* data={data}  */}
-              <Tableshow />
+              <Tableshow data={data} />
             </div>
           </div>
           <div className="max-w-7xl mx-auto">
-            <div className="font-bold text-2xl md:text-5xl my-5 text-center font-heading tracking-wide">
+            <div className="flex items-center justify-center font-bold text-2xl md:text-5xl my-5 text-center font-heading tracking-wide gap-8 mb-5">
+              <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-0 lg:w-80 border-2 bg-activepurple" />
               Detail Analysis
+              <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-0 lg:w-80 border-2 bg-activepurple" />
             </div>
             <Button />
           </div>
-          <Analysistables data={analysisData}/>
+          <Analysistables data={analysisData} />
         </Layout>
       </div>
     </>
@@ -67,12 +70,12 @@ export async function getServerSideProps() {
   const marketData = await fetch("http://localhost:5000/api/v1/Price");
   analysisData.push(await marketData.json());
 
-  for(var i in analysisData){
+  for (var i in analysisData) {
     analysisData[i].id = i;
   }
 
-  console.log(data);
-  console.log(analysisData);
+  // console.log(data);
+  // console.log(analysisData);
   return {
     props: { data, analysisData },
   };

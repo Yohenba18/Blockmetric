@@ -4,7 +4,7 @@ import githubicon from "../../assets/svg/github.svg";
 import instaicon from "../../assets/svg/instagram.svg";
 import twittericon from "../../assets/svg/twitter.svg";
 import linkedinicon from "../../assets/svg/linkedin.svg";
-import BMlogo from "../../assets/svg/BM.svg";
+import Blockmetriclogo from "../../assets/svg/Blockmetric.svg";
 import { motion } from "framer-motion";
 
 const Fotter: React.FC = () => {
@@ -14,10 +14,14 @@ const Fotter: React.FC = () => {
         <div className="flex flex-col static bottom-0 p-8 px-2 pb-1 md:px-2 md:max-w-7xl mx-auto">
           <div className="flex flex-col mb-4 justify-between md:flex-row">
             <div className="mb-4 text-xs text-center sm:text-sm md:text-base md:mr-20 md:text-left">
-              <div className="text-xl font-bold mb-3 md:text-3xl">
+              <motion.div
+                className="text-xl font-bold mb-3 md:text-3xl"
+                whileHover={{ scale: 1.3, originX: 0 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 {/* <h2>Blockmetric</h2> */}
-                <Image src={BMlogo} className="cursor-pointer " />
-              </div>
+                <Image src={Blockmetriclogo} className="cursor-pointer " />
+              </motion.div>
               <div>
                 <p className="hidden md:flex text-text-secondary text-xs max-w-xl">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
