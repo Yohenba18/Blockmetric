@@ -7,9 +7,9 @@ export const WhatPro: React.FC = () => {
     <div className="h-auto py-40">
       <div className="text-center justify-evenly items-center flex flex-col max-w-7xl mx-auto  ">
         <div className="flex items-center font-bold text-2xl md:text-4xl gap-8">
-          <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-0 lg:w-80 border-2 bg-activepurple"/>
+          <hr className="border-activepurple shadow-lg shadow-cyan-500/50  w-20 sm:w-40  md:w-60  lg:w-80 border-2 bg-activepurple" />
           <h1>What we provide?</h1>
-          <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-0 lg:w-80 border-2 bg-activepurple"/>
+          <hr className="border-activepurple shadow-lg shadow-cyan-500/50  w-20 sm:w-40  md:w-60  lg:w-80 border-2 bg-activepurple" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 mt-12 gap-8 md:gap-14 gap-x-20 ">
           {whatprovide.map((provide, index) => (

@@ -10,8 +10,6 @@ function Analysis({ data, analysisData }: any) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
 
-  console.log(analysisData);
-
   useEffect(() => {
     const securePage = async () => {
       const session = await getSession();
@@ -29,6 +27,10 @@ function Analysis({ data, analysisData }: any) {
     return <h2>Loading.....</h2>;
   }
 
+  analysisData.map((data: any) => {
+    data.data.sort(({ a, b }: any) => b.value - a.value);
+  });
+
   return (
     <>
       <div className="bg-background-primary text-white h-auto">
@@ -43,9 +45,9 @@ function Analysis({ data, analysisData }: any) {
           </div>
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center justify-center font-bold text-2xl md:text-5xl my-5 text-center font-heading tracking-wide gap-8 mb-5">
-              <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-0 lg:w-80 border-2 bg-activepurple" />
+              <hr className="border-activepurple shadow-lg shadow-cyan-500/50  w-20 sm:w-40  md:w-60  lg:w-80 border-2 bg-activepurple" />
               Detail Analysis
-              <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-0 lg:w-80 border-2 bg-activepurple" />
+              <hr className="border-activepurple shadow-lg shadow-cyan-500/50  w-20 sm:w-40  md:w-60  lg:w-80 border-2 bg-activepurple" />
             </div>
             <Button />
           </div>
