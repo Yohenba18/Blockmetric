@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
       <Headroom wrapperStyle={{ height: "90px" }} style={{ height: "90px" }}>
         <header className="bg-background-primary px-5 md:px-10 py-5 z-20">
           <div className="flex items-center justify-between align-middle ">
-            <div className="text-3xl font-semibold md:text-3xl font-heading tracking-wide">
+            <div className="flex mt-2">
               <Link href="/">
                 <motion.div
                   whileHover={{ scale: 1.3, originX: 0 }}

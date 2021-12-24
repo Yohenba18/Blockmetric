@@ -21,7 +21,7 @@ export default function Home({ data }: any) {
               </p>
             </div>
           </div>
-          <div className="max-w-7xl mx-auto items-center md:items-start h-96">
+          <div className="flex flex-col max-w-7xl mx-auto md:items-start h-96">
             <div className="font-bold text-2xl md:text-4xl text-center md:text-left font-heading tracking-wide">
               <h1>OVERALL RANKING</h1>
             </div>
