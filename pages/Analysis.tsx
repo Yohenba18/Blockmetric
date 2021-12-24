@@ -27,10 +27,6 @@ function Analysis({ data, analysisData }: any) {
     return <h2>Loading.....</h2>;
   }
 
-  analysisData.map((data: any) => {
-    data.data.sort(({ a, b }: any) => b.value - a.value);
-  });
-
   return (
     <>
       <div className="bg-background-primary text-white h-auto">
@@ -63,12 +59,15 @@ export async function getServerSideProps() {
   const data = await result.json();
 
   const analysisData = [];
+
   const transactionData = await fetch(
     "http://localhost:5000/api/v1/Transaction"
   );
   analysisData.push(await transactionData.json());
+
   const developersData = await fetch("http://localhost:5000/api/v1/Developers");
   analysisData.push(await developersData.json());
+
   const marketData = await fetch("http://localhost:5000/api/v1/Price");
   analysisData.push(await marketData.json());
 
@@ -78,9 +77,11 @@ export async function getServerSideProps() {
 
   // console.log(data);
   // console.log(analysisData);
+
   return {
     props: { data, analysisData },
   };
+  
 }
 
 export default Analysis;

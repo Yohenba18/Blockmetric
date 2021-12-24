@@ -10,7 +10,7 @@ const data = {
       fill: false,
       backgroundColor: "rgb(255, 99, 132)",
       borderColor: "rgba(255, 99, 132, 0.2)",
-      height: 500
+      height: 700
     },
   ],
 };

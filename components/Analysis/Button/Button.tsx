@@ -7,8 +7,7 @@ export const Button = () => {
         <Singlebutton title="Transaction speed" />
         <Singlebutton title="Gas Price" />
         <Singlebutton title="Hash Rate" />
-        <Singlebutton title="Users" />
-        <Singlebutton title="Activity" />
+        <Singlebutton title="Devlopers" />
         <Singlebutton title="Market" />
       </div>
     </>
