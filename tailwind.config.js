@@ -29,6 +29,9 @@ module.exports = {
       fontFamily: {
         heading: ["Khand"],
       },
+      // backgroundImage: {
+      //  'blogcard': "url('/assets/photo/mountains.jpg')"
+      // },
     },
   },
   variants: {

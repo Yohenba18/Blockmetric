@@ -31,8 +31,8 @@ const Table: React.FC<TableProps> = (props) => {
         },
       }}
     >
-      <div className="bg-background-primary p-2 rounded-md overflow-x-scroll mx-auto lg:w-full">
-        <table className="table-auto ">
+      <div className="bg-background-primary p-2 rounded-md overflow-x-scroll mx-auto  w-full">
+        <table className="table-auto lg:w-full">
           <thead className="bg-background-table text-text-secondary text-sm">
             <tr>
               {props.children}

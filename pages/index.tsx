@@ -27,16 +27,13 @@ export default function Home({ data }: any) {
             </div>
             <Tableshow data={data} />
           </div>
-          <div className="items-center flex flex-col md:flex-row md:justify-between h-auto max-w-7xl mx-auto">
+          <div className="items-center flex flex-col md:flex-row md:justify-between gap-8 h-auto max-w-7xl mx-auto">
             <div className="hidden md:flex align-center h-50 w-50 md:h-100 md:w-100 p-5">
               <Image src={analysis} alt="analysis" />
             </div>
-            <div className="flex flex-col items-center md:ml-10">
-              <div className="flex font-bold text-2xl md:text-4xl mb-5">
+            <div className="flex flex-col items-center gap-5 max-w-xl mt-10 md:mt-0">
+              <div className="flex font-bold text-2xl md:text-4xl">
                 Who are we?
-              </div>
-              <div className="flex align-center md:hidden h-50 w-50 md:h-100 md:w-100 p-5">
-                <Image src={analysis} alt="analysis" />
               </div>
               <p className="md:flex text-text-secondary text-base text-center md:text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

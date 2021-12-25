@@ -11,30 +11,6 @@ import { useEffect, useState } from "react";
 SwiperCore.use([Pagination, Navigation]);
 
 const Blogcards = () => {
-  // const [slides, setSlides] = useState(3);
-  // const [center, setCenter] = useState(false);
-  // const [space, setSpace] = useState(30);
-
-  // function getWindowDimensions() {
-  //   const { innerWidth: width, innerHeight: height } = window;
-  //   return {
-  //     width,
-  //     height,
-  //   };
-  // }
-
-  // useEffect(() => {
-  //   var size = getWindowDimensions();
-
-  //   if (size.width <= 1024 && size.width > 640) {
-  //     setSlides(2);
-  //     setSpace(10);
-  //     setCenter(true);
-  //   } else if (size.width <= 640) {
-  //     setSlides(1);
-  //     setCenter(true);
-  //   }
-  // }, []);
 
   return (
     <div className="bg-gradient-to-t from-background-secondary1 pb-20">
@@ -57,7 +33,7 @@ const Blogcards = () => {
               slidesPerView: 2,
             },
             1100: {
-              spaceBetween: 30,
+              spaceBetween: 10,
               slidesPerView: 3,
             },
           }}

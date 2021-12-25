@@ -3,8 +3,8 @@ import person from "../assets/photo/person.jpg";
 export default [
   {
     id: 0,
-    name: "Rock",
-    designation: "Cleaner",
+    name: "Ankur Wariku",
+    designation: "Founder nearbuy.com, Mentor, Angel Investor, Public Speaker",
     image_url: person,
     words:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl augue, mattis sit amet felis vel, pretium faucibus metu",
