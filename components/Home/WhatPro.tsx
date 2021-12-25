@@ -11,7 +11,7 @@ export const WhatPro: React.FC = () => {
           <h1>What we provide?</h1>
           <hr className="border-activepurple shadow-lg shadow-cyan-500/50  w-20 sm:w-40  md:w-48 lg:w-80 border-2 bg-activepurple" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-12 gap-8 md:gap-14 gap-x-20 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-12 gap-8 md:gap-14  ">
           {whatprovide.map((provide, index) => (
             <div className="flex flex-col gap-4 items-center text-center">
               <motion.div
@@ -23,7 +23,6 @@ export const WhatPro: React.FC = () => {
                   alt={provide.title}
                   width={400}
                   height={300}
-                  objectFit="cover"
                 />
               </motion.div>
               <div className="flex flex-col items-center">

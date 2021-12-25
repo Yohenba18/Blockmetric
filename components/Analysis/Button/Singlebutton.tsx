@@ -8,7 +8,7 @@ export const Singlebutton = ({ title }: any) => {
   return (
     <>
       <motion.button
-        className=" bg-background-secondary2 hover:bg-activepurple rounded-md px-6 py-2 overflow-y-hidden"
+        className=" bg-background-secondary2 w-auto hover:bg-activepurple rounded-md px-6 py-2 "
         onClick={handleclick}
         whileHover={{ scale: 1.1}}
         whileTap={{ scale: 0.9 }}

@@ -14,14 +14,14 @@ export const Analysistables = ({ data }: any) => {
         return (
           <>
             <div
-              className={`flex flex-col my-5 md:flex-row md:justify-between items-center ${
+              className={`flex flex-col mb-10 md:flex-row md:justify-evenly items-center ${
                 dat.id % 2 === 0 && "md:flex-row-reverse"
               }`}
             >
-              <div className="w-1/2">
+              <div className="text-center">
                 <SingleTable data={dat} />
               </div>
-              <div className="px-36">
+              <div>
                 <Graph />
               </div>
             </div>

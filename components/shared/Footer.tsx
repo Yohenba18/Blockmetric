@@ -31,9 +31,9 @@ const Fotter: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="text-center flex justify-between text-xs sm:text-sm md:text-base md:mr-5 md:gap-5 ">
-              <div className="">
-                <h3 className="mb-2 text-sm font-bold md:text-base">
+            <div className="text-center sm:flex sm:justify-evenly sm:align-middle text-xs sm:text-sm md:text-base md:mr-5 md:gap-5 ">
+              <div className="flex flex-col items-center">
+                <h3 className="mb-2 text-lg font-bold md:text-base">
                   Follow Us
                 </h3>
                 <div className="flex gap-1 items-center">
@@ -63,17 +63,17 @@ const Fotter: React.FC = () => {
                   </motion.div>
                 </div>
                 <Link href="/Community">
-                  <p className="text-text-secondary text-sm cursor-pointer hover:text-gray-50">
+                  <p className="hidden sm:flex text-text-secondary text-sm cursor-pointer hover:text-gray-50">
                     Community
                   </p>
                 </Link>
                 <Link href="/Contactus">
-                  <p className="text-text-secondary text-sm cursor-pointer hover:text-gray-50">
+                  <p className="hidden sm:flex text-text-secondary text-sm cursor-pointer hover:text-gray-50">
                     Contact us
                   </p>
                 </Link>
               </div>
-              <div className="">
+              <div className="hidden sm:flex sm:flex-col">
                 <h3 className="mb-2 text-sm font-bold md:text-base">Company</h3>
                 <Link href="/AboutUs">
                   <p className="text-text-secondary text-sm cursor-pointer hover:text-gray-50">
@@ -91,7 +91,7 @@ const Fotter: React.FC = () => {
                   </p>
                 </Link>
               </div>
-              <div className="">
+              <div className="hidden sm:flex sm:flex-col">
                 <h3 className="mb-2 text-xs font-bold md:text-base">Join Us</h3>
                 <Link href="/Careers">
                   <p className="text-text-secondary text-sm cursor-pointer hover:text-gray-50">

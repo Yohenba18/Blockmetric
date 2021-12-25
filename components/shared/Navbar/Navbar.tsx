@@ -120,7 +120,7 @@ export const Navbar: React.FC = () => {
           </div>
           {openModal && (
             <motion.nav
-              className="flex flex-col gap-5  left-0 w-full bg-background-primary mx-auto p-8 pb-0"
+              className="flex flex-col gap-5 left-0 w-full mx-auto p-8 pb-0"
               animate={openModal ? "visible" : "hidden"}
               variants={variants}
             >
