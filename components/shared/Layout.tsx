@@ -4,9 +4,11 @@ import Footer from "./Footer";
 const Layout = ({ children }: any) => {
   return (
     <>
-      <Navbar />
-      {children}
-      <Footer />
+      <div className="bg-background-primary text-white">
+        <Navbar />
+        {children}
+        <Footer />
+      </div>
     </>
   );
 };

@@ -45,7 +45,6 @@ function SignUp() {
 
   return (
     <>
-    <div className="bg-background-primary text-white h-auto">
       <Layout>
         <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 py-5 md:py-0 my-10">
           <div className="bg-gradient-to-r from-gradientpurple md:p-10 py-20 text-center">
@@ -158,7 +157,6 @@ function SignUp() {
           </div>
         </div>
       </Layout>
-    </div>
     </>
   );
 }

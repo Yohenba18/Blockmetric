@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 export const WhatPro: React.FC = () => {
   return (
-    <div className="h-auto py-20">
-      <div className="text-center justify-evenly items-center flex flex-col max-w-7xl mx-auto  ">
-        <div className="flex items-center font-bold text-2xl md:text-4xl gap-4 md:gap-4">
-          <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-20 sm:w-40 md:w-48  lg:w-80 border-2 bg-activepurple" />
+    <div className="my-20 md:my-40">
+      <div className="text-center justify-evenly items-center flex flex-col max-w-7xl md:mx-auto">
+        <div className="flex items-center font-bold text-2xl md:text-4xlg gap-4 md:gap-4">
+          <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-12 sm:w-40 md:w-48  lg:w-80 border-2 bg-activepurple" />
           <h1>What we provide?</h1>
-          <hr className="border-activepurple shadow-lg shadow-cyan-500/50  w-20 sm:w-40  md:w-48 lg:w-80 border-2 bg-activepurple" />
+          <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-12 sm:w-40  md:w-48 lg:w-80 border-2 bg-activepurple" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 mt-12 gap-8 md:gap-14  ">
           {whatprovide.map((provide, index) => (

@@ -9,57 +9,56 @@ import Tableshow from "../components/Table/Tableshow";
 export default function Home({ data }: any) {
   return (
     <>
-      <div className="bg-background-primary text-white h-auto">
-        <Layout>
-          <div className="text-center h-96 flex flex-col justify-center px-5 bg-gradient-to-b from-background-secondary2">
-            <div className="font-extrabold text-5xl md:text-8xl font-heading">
-              <h1>BlockMetric</h1>
-            </div>
-            <div className="text-gray-300 text-2xl mt-4 font-sans">
-              <p>
-                Analyse your perfomance with the real time data of the exisiting
-                blockchains
-              </p>
+      <Layout>
+        <div className="text-center  flex flex-col justify-center px-5 py-28 bg-gradient-to-b from-background-secondary2">
+          <div className="font-extrabold text-5xl md:text-8xl font-heading">
+            <h1>BlockMetric</h1>
+          </div>
+          <div className="text-gray-300 text-2xl mt-4 font-sans">
+            <p>
+              Analyse your perfomance with the real time data of the exisiting
+              blockchains
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-5 max-w-7xl mx-auto md:items-start h-96">
+          <div className="font-bold text-2xl md:text-4xl md:text-left font-heading tracking-wide pl-3">
+            <h1>OVERALL RANKING</h1>
+          </div>
+          <Tableshow data={data} />
+        </div>
+        <div className="items-center flex flex-col md:flex-row md:justify-evenly gap-8 h-auto max-w-7xl mx-5 lg:mx-auto">
+          <div className="flex flex-col md:flex-row gap-10 p-5">
+            <Image
+              src={teams}
+              alt="We"
+              width={500}
+              height={500}
+              objectFit="cover"
+            />
+          </div>
+          <div className="flex flex-col gap-5 max-w-xl my-10 md:my-40">
+            <h1 className="flex text-center sm:text-left font-bold text-2xl md:text-4xl">
+              Who are we?
+            </h1>
+            <div className="text-text-secondary text-base">
+              BlockMetric is an{" "}
+              <strong className="text-gray-300">Open-source blockchain analysis platform</strong>, that
+              helps you helps you compare between different blockchains from
+              Ethereum to Dogecoin according to usecase and helps you find the
+              perfect blockchain for your needs.
             </div>
           </div>
-          <div className="flex flex-col max-w-7xl mx-auto md:items-start h-96">
-            <div className="font-bold text-2xl md:text-4xl text-center md:text-left font-heading tracking-wide">
-              <h1>OVERALL RANKING</h1>
-            </div>
-            <Tableshow data={data} />
-          </div>
-          <div className="items-center flex flex-col md:flex-row md:justify-evenly gap-8 h-auto max-w-7xl mx-auto">
-            <div className="hidden md:flex p-5">
-              <Image
-                src={teams}
-                alt="We"
-                width={500}
-                height={500}
-                objectFit="cover"
-              />
-            </div>
-            <div className="flex flex-col items-center gap-5 max-w-xl mt-10 md:mt-0">
-              <div className="flex font-semibold text-2xl md:text-4xl">
-                Who are we?
-              </div>
-              <p className="md:flex text-text-secondary text-lg text-center md:text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor{" "}
-              </p>
-            </div>
-          </div>
-          <WhatPro />
-          <Blogcards />
-        </Layout>
-      </div>
+        </div>
+        <WhatPro />
+        <Blogcards />
+      </Layout>
     </>
   );
 }
 
 export async function getServerSideProps() {
-  const result = await fetch("http://localhost:5000/api/v1/");
+  const result = await fetch("https://blockmetric-back.herokuapp.com/api/v1/");
   const data = await result.json();
   console.log(data);
 

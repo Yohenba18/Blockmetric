@@ -13,7 +13,7 @@ SwiperCore.use([Pagination, Navigation]);
 const Blogcards = () => {
 
   return (
-    <div className="bg-gradient-to-t from-background-secondary1 pb-20">
+    <div className="bg-gradient-to-t from-background-secondary1 py-20">
       <div className="max-w-7xl mx-auto h-auto">
         <div className="flex items-center justify-center gap-8 text-center font-bold text-2xl md:text-4xl mb-10 sm">
           <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-20 sm:w-40  md:w-60 lg:w-80 border-2 bg-activepurple" />

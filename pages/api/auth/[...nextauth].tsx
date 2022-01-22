@@ -18,10 +18,6 @@ export default NextAuth({
       // authorizationUrl:
       //   "https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&access_type=offline&response_type=code",
     }),
-    Providers.Twitter({
-      clientId: process.env.TWITTER_ID,
-      clientSecret: process.env.TWITTER_SECRET,
-    }),
     Providers.Credentials({
       name: "Credentials",
       async authorize(credentials, req) {

@@ -11,7 +11,7 @@ const Fotter: React.FC = () => {
   return (
     <>
       <footer className="bg-navblack">
-        <div className="flex flex-col static bottom-0 p-8 px-2 pb-1 md:px-2 md:max-w-7xl mx-auto">
+        <div className="flex flex-col gap-4 static bottom-0 p-8 px-2 pb-1 md:px-2 md:max-w-7xl mx-auto">
           <div className="flex flex-col mb-4 justify-between md:flex-row">
             <div className="mb-4 text-xs text-center sm:text-sm md:text-base md:mr-20 md:text-left">
               <motion.div
@@ -22,14 +22,6 @@ const Fotter: React.FC = () => {
                 {/* <h2>Blockmetric</h2> */}
                 <Image src={Blockmetriclogo} className="cursor-pointer " />
               </motion.div>
-              <div>
-                <p className="hidden md:flex text-text-secondary text-xs max-w-xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
             </div>
             <div className="text-center sm:flex sm:justify-evenly sm:align-middle text-xs sm:text-sm md:text-base md:mr-5 md:gap-5 ">
               <div className="flex flex-col items-center">
@@ -62,11 +54,6 @@ const Fotter: React.FC = () => {
                     <Image src={linkedinicon} className="cursor-pointer" />
                   </motion.div>
                 </div>
-                <Link href="/Community">
-                  <p className="hidden sm:flex text-text-secondary text-sm cursor-pointer hover:text-gray-50">
-                    Community
-                  </p>
-                </Link>
                 <Link href="/Contactus">
                   <p className="hidden sm:flex text-text-secondary text-sm cursor-pointer hover:text-gray-50">
                     Contact us
@@ -98,7 +85,7 @@ const Fotter: React.FC = () => {
                     Careers
                   </p>
                 </Link>
-                <Link href="/Community">
+                <Link href="https://discord.gg/cZ48YvYT">
                   <p className="text-text-secondary text-sm cursor-pointer hover:text-gray-50">
                     Community
                   </p>
@@ -106,8 +93,8 @@ const Fotter: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="text-center text-xs">
-            <p>Copyright © 2021 BLOCKMETRIC, All Rights Reserved</p>
+          <div className="text-center text-sm md:text-base py-5 md:mb-3 text-white border-t-2 border-slate-200">
+            {`Copyright © ${new Date().getFullYear()} BLOCKMETRIC, All Rights Reserved`}
           </div>
         </div>
       </footer>
