@@ -71,11 +71,11 @@ function Contactus() {
                   Submit
                 </button>
               </form>
-              <div className="mt-10">
-                <h3 className="text-center font-extrabold text-2xl md:text-3xl mb-5">
+              <div className="my-10">
+                <h3 className="text-left font-extrabold text-2xl md:text-3xl mb-5">
                   Follow Us
                 </h3>
-                <div className="flex gap-1 items-center">
+                <div className="flex gap-2">
                   <div>
                     <Image src={githubicon} className="cursor-pointer " />
                   </div>
