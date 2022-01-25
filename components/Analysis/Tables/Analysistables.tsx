@@ -22,7 +22,7 @@ export const Analysistables = ({ data }: any) => {
                 <SingleTable data={dat} />
               </div>
               <div>
-                <Graph />
+                <Graph graphData={dat}/>
               </div>
             </div>
           </>

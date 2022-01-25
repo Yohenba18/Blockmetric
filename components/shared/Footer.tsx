@@ -20,10 +20,10 @@ const Fotter: React.FC = () => {
                 whileTap={{ scale: 0.9 }}
               >
                 {/* <h2>Blockmetric</h2> */}
-                <Image src={Blockmetriclogo} className="cursor-pointer " />
+                <Image src={Blockmetriclogo} className="cursor-pointer" />
               </motion.div>
             </div>
-            <div className="text-center sm:flex sm:justify-evenly sm:align-middle text-xs sm:text-sm md:text-base md:mr-5 md:gap-5 ">
+            <div className="text-center sm:flex sm:justify-evenly sm:align-middle text-xs sm:text-sm md:text-base md:mr-5 md:gap-10 ">
               <div className="flex flex-col items-center">
                 <h3 className="mb-2 text-lg font-bold md:text-base">
                   Follow Us
