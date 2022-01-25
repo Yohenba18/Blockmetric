@@ -30,8 +30,8 @@ export const Graph = ({ graphData }: any) => {
 
   return (
     <>
-      <div className="h-1/2">
-        <Bar data={data} options={options} />
+      <div className="">
+        <Bar data={data} height={400} width={500} options={options} />
       </div>
     </>
   );
