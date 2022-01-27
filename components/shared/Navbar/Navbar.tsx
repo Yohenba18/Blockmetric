@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
   const [openModal, setOpenModal] = useState(false);
   const dropRef = React.useRef<HTMLDivElement>(null);
 
-  const name = session ? session.user.name : "Wim Mostmans"
+  // const name = session ? session.user.name : "Wim Mostmans"
 
   return (
     <>
@@ -58,7 +58,7 @@ export const Navbar: React.FC = () => {
                   <>
                     <Dropdown.Anchor listRef={dropRef}>
                       <Avatar
-                        name={name}
+                        name="Wim Mostmans"
                         size="50"
                         round={true}
                         onClick={() => setOpenModal(false)}
