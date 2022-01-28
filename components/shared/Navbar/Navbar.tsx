@@ -28,8 +28,16 @@ export const Navbar: React.FC = () => {
   const [openModal, setOpenModal] = useState(false);
   const dropRef = React.useRef<HTMLDivElement>(null);
 
-  // const name = session ? session.user.name : "Wim Mostmans"
+  // var avatarName;
+  // if (session) {
+  //   avatarName = session.user ? session.user.name : "Wim Mostmans";
+  // }
 
+  var avatarName = session ? session.user?.name : "Wim Mostmans";
+  if (avatarName === null) {
+    avatarName = undefined;
+  }
+  
   return (
     <>
       <Headroom wrapperStyle={{ height: "90px" }} style={{ height: "90px" }}>
@@ -58,7 +66,7 @@ export const Navbar: React.FC = () => {
                   <>
                     <Dropdown.Anchor listRef={dropRef}>
                       <Avatar
-                        name="Wim Mostmans"
+                        name={avatarName}
                         size="50"
                         round={true}
                         onClick={() => setOpenModal(false)}
