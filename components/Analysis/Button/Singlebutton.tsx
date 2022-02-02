@@ -2,10 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
 export const Singlebutton = ({ title }: any) => {
-  const handleclick = () => {
-    alert(title);
-  };
-
   return (
     <>
       <motion.button

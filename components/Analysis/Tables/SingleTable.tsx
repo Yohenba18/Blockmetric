@@ -4,7 +4,6 @@ export const SingleTable = ({ data }: any) => {
   return (
     <>
       <div
-        id={data.title}
         className="font-bold text-2xl md:text-4xl font-heading tracking-wide"
       >
         {data.title}

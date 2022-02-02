@@ -18,7 +18,7 @@ export const Analysistables = ({ data }: any) => {
                 dat.id % 2 === 0 && "md:flex-row-reverse"
               }`}
             >
-              <div className="text-center">
+              <div id={dat.title} className="text-center">
                 <SingleTable data={dat} />
               </div>
               <div>
