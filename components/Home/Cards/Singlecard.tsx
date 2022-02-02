@@ -1,8 +1,7 @@
 import Image from "next/image";
 
-export const Singlecard = ({ name, url, words, designation }:any) => {
-
-  const MAX_LENGTH = 15
+export const Singlecard = ({ name, url, words, designation }: any) => {
+  const MAX_LENGTH = 15;
 
   return (
     <div className="w-72 md:w-80 text-center h-72 bg-background-card mx-auto my-10">
@@ -18,7 +17,9 @@ export const Singlecard = ({ name, url, words, designation }:any) => {
         </div>
         <div className="flex flex-col text-left justify-center mr-5">
           <h2 className="font-bold text-xl">{name}</h2>
-          <h4 className="font-normal text-sm">{designation.substring(0, MAX_LENGTH)}.....</h4>
+          <h4 className="font-normal text-sm">
+            {designation.substring(0, MAX_LENGTH)}.....
+          </h4>
         </div>
       </div>
       <div className="text-text-secondary text-center text-sm mt-7 md:px-6">

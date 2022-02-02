@@ -5,6 +5,7 @@ import Tableshow from "../components/Table/Tableshow";
 import { Button } from "../components/Analysis/Button/Button";
 import { useRouter } from "next/router";
 import { Analysistables } from "../components/Analysis/Tables/Analysistables";
+import Loader from "react-loader-spinner";
 
 function Analysis({ data, analysisData }: any) {
   const router = useRouter();
@@ -24,13 +25,29 @@ function Analysis({ data, analysisData }: any) {
   }, []);
 
   if (loading) {
-    return <h2>Loading.....</h2>;
+    return <h1>Loading....</h1>;
   }
+
+  // (
+  //   <>
+  //     <Layout>
+  //       <div className="flex justify-center align-middle bg-background-primary h-96">
+  //         <Loader
+  //           type="Circles"
+  //           color="#02DAC5"
+  //           height={200}
+  //           width={200}
+  //           timeout={3000} //3 secs
+  //         />
+  //       </div>
+  //     </Layout>
+  //   </>
+  // );
 
   return (
     <>
       <Layout>
-        <div className=" bg-gradient-to-b from-background-secondary2">
+        <div className="bg-gradient-to-b from-background-secondary2">
           <div className="max-w-7xl mx-auto py-10 ">
             <div className="font-bold text-2xl md:text-5xl my-5 font-heading tracking-wide ml-5">
               Ranking
@@ -53,24 +70,20 @@ function Analysis({ data, analysisData }: any) {
 }
 
 export async function getServerSideProps() {
-  const result = await fetch("https://blockmetric-back.herokuapp.com/api/v1/");
+  const allDataApi = "https://blockmetric-back.herokuapp.com/api/v1/";
+  
+  const result = await fetch(allDataApi);
   const data = await result.json();
 
   const analysisData = [];
 
-  const transactionData = await fetch(
-    "https://blockmetric-back.herokuapp.com/api/v1/Transaction"
-  );
+  const transactionData = await fetch(allDataApi + "Transaction");
   analysisData.push(await transactionData.json());
 
-  const developersData = await fetch(
-    "https://blockmetric-back.herokuapp.com/api/v1/Developers"
-  );
+  const developersData = await fetch(allDataApi + "Developers");
   analysisData.push(await developersData.json());
 
-  const marketData = await fetch(
-    "https://blockmetric-back.herokuapp.com/api/v1/Price"
-  );
+  const marketData = await fetch(allDataApi + "Price");
   analysisData.push(await marketData.json());
 
   for (var i in analysisData) {
