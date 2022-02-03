@@ -6,19 +6,21 @@ import { Button } from "../components/Analysis/Button/Button";
 import { useRouter } from "next/router";
 import { Analysistables } from "../components/Analysis/Tables/Analysistables";
 import Loader from "react-loader-spinner";
+import { useMoralis } from "react-moralis";
 
 function Analysis({ data, analysisData }: any) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
+  const { isAuthenticated } = useMoralis();
 
   useEffect(() => {
     const securePage = async () => {
       const session = await getSession();
-      if (!session) {
+      if (session || isAuthenticated) {
+        setLoading(false);
+      } else {
         alert("You are not Logged in");
         router.push("/Login");
-      } else {
-        setLoading(false);
       }
     };
     securePage();
@@ -71,7 +73,7 @@ function Analysis({ data, analysisData }: any) {
 
 export async function getServerSideProps() {
   const allDataApi = "https://blockmetric-back.herokuapp.com/api/v1/";
-  
+
   const result = await fetch(allDataApi);
   const data = await result.json();
 
@@ -89,9 +91,6 @@ export async function getServerSideProps() {
   for (var i in analysisData) {
     analysisData[i].id = i;
   }
-
-  // console.log(data);
-  // console.log(analysisData);
 
   return {
     props: { data, analysisData },

@@ -12,6 +12,7 @@ import { Navlinkmobile } from "./Navlinkmobile";
 import Dropdown from "../../Dropdown";
 import { motion } from "framer-motion";
 import Blockmetric from "../../../assets/svg/Blockmetric.svg";
+import { useMoralis } from "react-moralis";
 
 const variants = {
   hidden: { opacity: 0, y: "-100%" },
@@ -27,17 +28,13 @@ export const Navbar: React.FC = () => {
   const [session, loading] = useSession();
   const [openModal, setOpenModal] = useState(false);
   const dropRef = React.useRef<HTMLDivElement>(null);
-
-  // var avatarName;
-  // if (session) {
-  //   avatarName = session.user ? session.user.name : "Wim Mostmans";
-  // }
+  const { isAuthenticated, user, logout } = useMoralis();
 
   var avatarName = session ? session.user?.name : "Wim Mostmans";
   if (avatarName === null) {
     avatarName = undefined;
   }
-  
+
   return (
     <>
       <Headroom wrapperStyle={{ height: "90px" }} style={{ height: "90px" }}>
@@ -58,11 +55,11 @@ export const Navbar: React.FC = () => {
                 <Navlinks
                   setShowDrawer={setShowDrawer}
                   router={router}
-                  session={session}
+                  session={session || isAuthenticated}
                 />
               </nav>
               <div className="flex gap-2">
-                {session ? (
+                {session || isAuthenticated ? (
                   <>
                     <Dropdown.Anchor listRef={dropRef}>
                       <Avatar
@@ -73,17 +70,35 @@ export const Navbar: React.FC = () => {
                       />
                     </Dropdown.Anchor>
                     <Dropdown.List ref={dropRef}>
-                      <Link href="/api/auth/signout">
-                        <a
-                          onClick={(e) => {
-                            e.preventDefault();
-                            signOut();
-                          }}
-                          className="text-black"
-                        >
-                          Sign Out
-                        </a>
-                      </Link>
+                      {session && (
+                        <>
+                          <Link href="/api/auth/signout">
+                            <a
+                              onClick={(e) => {
+                                e.preventDefault();
+                                signOut();
+                                router.push("/");
+                              }}
+                              className="text-black"
+                            >
+                              Sign Out
+                            </a>
+                          </Link>
+                        </>
+                      )}
+                      {isAuthenticated && (
+                        <>
+                          <button
+                            onClick={() => {
+                              logout();
+                              router.push("/");
+                            }}
+                            className="text-black"
+                          >
+                            Sign Out
+                          </button>
+                        </>
+                      )}
                     </Dropdown.List>
                   </>
                 ) : (
@@ -137,7 +152,7 @@ export const Navbar: React.FC = () => {
               <Navlinkmobile
                 setShowDrawer={setShowDrawer}
                 router={router}
-                session={session}
+                session={session || isAuthenticated}
               />
               <button onClick={() => setOpenModal(!openModal)}>
                 <ChevronUpIcon className="relative mx-auto text-buttonbg h-8 w-8 transform-gpu transition-transform hover:scale-125 active:scale-90" />

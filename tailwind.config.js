@@ -20,7 +20,6 @@ module.exports = {
         dropbg: "#21242E",
         bloglightblue: "#193766",
         purplebg: "#322145",
-        cardbg: "#0B0C0F",
         buttonbg: "#20B2AA",
         text: {
           secondary: "#C4C4C4",

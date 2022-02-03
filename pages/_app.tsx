@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import "swiper/css/bundle";
 import { Provider } from "next-auth/client";
+import { MoralisProvider } from "react-moralis";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -19,8 +20,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
         session={pageProps.session}
       >
-        <Component {...pageProps} />
-      </Provider>
+        <MoralisProvider
+          appId={process.env.NEXT_PUBLIC_APP_ID}
+          serverUrl={process.env.NEXT_PUBLIC_SERVER_URL}
+        >
+          <Component {...pageProps} />
+        </MoralisProvider>
+      </Provider>{" "}
     </>
   );
 }

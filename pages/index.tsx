@@ -43,10 +43,12 @@ export default function Home({ data }: any) {
             </h1>
             <div className="text-text-secondary text-base">
               BlockMetric is an{" "}
-              <strong className="text-gray-300">Open-source blockchain analysis platform</strong>, that
-              helps you helps you compare between different blockchains from
-              Ethereum to Dogecoin according to usecase and helps you find the
-              perfect blockchain for your needs.
+              <strong className="text-gray-300">
+                Open-source blockchain analysis platform
+              </strong>
+              , that helps you helps you compare between different blockchains
+              from Ethereum to Dogecoin according to usecase and helps you find
+              the perfect blockchain for your needs.
             </div>
           </div>
         </div>
@@ -60,8 +62,6 @@ export default function Home({ data }: any) {
 export async function getServerSideProps() {
   const result = await fetch("https://blockmetric-back.herokuapp.com/api/v1/");
   const data = await result.json();
-  console.log(data);
-
   return {
     props: { data },
   };
