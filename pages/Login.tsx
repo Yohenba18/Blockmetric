@@ -24,10 +24,10 @@ function Login() {
     securePage();
   }, []);
 
-  if(isAuthenticated){
+  if (isAuthenticated) {
     router.push("/");
   }
-  
+
   return (
     <>
       <Layout>

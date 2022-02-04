@@ -24,8 +24,7 @@
     "react-loader-spinner": "^5.1.0",
     "react-moralis": "^1.2.1",
     "react-scroll": "^1.8.4",
-    "swiper": "^7.0.7",
-    "swr": "^1.1.1"
+    "swiper": "^7.0.7"
   },
   "devDependencies": {
     "@types/react": "17.0.24",

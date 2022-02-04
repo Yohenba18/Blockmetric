@@ -12,8 +12,8 @@ export const WhatPro: React.FC = () => {
           <hr className="border-activepurple shadow-lg shadow-cyan-500/50 w-12 sm:w-40  md:w-48 lg:w-80 border-2 bg-activepurple" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 mt-12 gap-8 md:gap-14  ">
-          {whatprovide.map((provide, index) => (
-            <div className="flex flex-col gap-4 items-center text-center">
+          {whatprovide.map((provide) => (
+            <div key={provide.id} className="flex flex-col gap-4 items-center text-center">
               <motion.div
                 className="overflow-hidden w-8/12 xs:w-8/12 sm:w-3/5"
                 whileHover={{ scale: 1.1 }}

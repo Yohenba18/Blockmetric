@@ -2,16 +2,13 @@ import { Singlecard } from "./Singlecard";
 import data from "../../../data/BlogCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation } from "swiper";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useEffect, useState } from "react";
 
 SwiperCore.use([Pagination, Navigation]);
 
 const Blogcards = () => {
-
   return (
     <div className="bg-gradient-to-t from-background-secondary1 py-20">
       <div className="max-w-7xl mx-auto h-auto">
@@ -23,6 +20,7 @@ const Blogcards = () => {
         <Swiper
           // Responsive breakpoints
           breakpoints={{
+            // when window width is >= 300px
             300: {
               spaceBetween: 30,
               slidesPerView: 1,
@@ -32,6 +30,7 @@ const Blogcards = () => {
               spaceBetween: 20,
               slidesPerView: 2,
             },
+            // when window width is >= 1100px
             1100: {
               spaceBetween: 10,
               slidesPerView: 3,
@@ -46,6 +45,7 @@ const Blogcards = () => {
             return (
               <SwiperSlide>
                 <Singlecard
+                  id={card.id}
                   name={card.name}
                   url={card.image_url}
                   designation={card.designation}

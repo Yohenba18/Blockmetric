@@ -1,10 +1,13 @@
 import Image from "next/image";
 
-export const Singlecard = ({ name, url, words, designation }: any) => {
+export const Singlecard = ({ id, name, url, words, designation }: any) => {
   const MAX_LENGTH = 15;
 
   return (
-    <div className="w-72 md:w-80 text-center h-72 bg-background-card mx-auto my-10">
+    <div
+      key={id}
+      className="w-72 md:w-80 text-center h-72 bg-background-card mx-auto my-10"
+    >
       <div className="grid grid-cols-2 bg-green-600 bg-opacity-40">
         <div className="relative z-10 bottom-8 right-5">
           <Image

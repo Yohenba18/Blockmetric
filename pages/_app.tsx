@@ -6,6 +6,12 @@ import { Provider } from "next-auth/client";
 import { MoralisProvider } from "react-moralis";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  
+  // const moralisProps = {
+  //   appId: process.env.NEXT_PUBLIC_APP_ID,
+  //   serverUrl: process.env.NEXT_PUBLIC_SERVER_URL,
+  // };
+
   return (
     <>
       <Head>
@@ -13,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content="Blockmetric" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Provider
         options={{
           clientMaxAge: 0,
@@ -21,13 +28,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         session={pageProps.session}
       >
         <MoralisProvider
-          appId={process.env.NEXT_PUBLIC_APP_ID}
-          serverUrl={process.env.NEXT_PUBLIC_SERVER_URL}
+          appId={process.env.NEXT_PUBLIC_APP_ID!}
+          serverUrl={process.env.NEXT_PUBLIC_SERVER_URL!}
+          initializeOnMount={true}
         >
           <Component {...pageProps} />
         </MoralisProvider>
-      </Provider>{" "}
+      </Provider>
     </>
   );
 }
+
 export default MyApp;
