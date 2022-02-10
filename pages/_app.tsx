@@ -6,11 +6,6 @@ import { Provider } from "next-auth/client";
 import { MoralisProvider } from "react-moralis";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  
-  // const moralisProps = {
-  //   appId: process.env.NEXT_PUBLIC_APP_ID,
-  //   serverUrl: process.env.NEXT_PUBLIC_SERVER_URL,
-  // };
 
   return (
     <>

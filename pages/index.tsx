@@ -11,19 +11,16 @@ export default function Home({ data }: any) {
     <>
       <Layout>
         <div className="text-center  flex flex-col justify-center px-5 py-28 bg-gradient-to-b from-background-secondary2">
-          <div className="font-extrabold text-5xl md:text-8xl font-heading">
+          <div className="font-extrabold text-5xl md:text-8xl font-sans">
             <h1>BlockMetric</h1>
           </div>
-          <div className="text-gray-300 text-2xl mt-4 font-sans">
-            <p>
-              Analyse your perfomance with the real time data of the exisiting
-              blockchains
-            </p>
+          <div className="text-gray-300 text-2xl mt-4">
+            <p>Analyse with the real time data of the exisiting blockchains</p>
           </div>
         </div>
         <div className="flex flex-col gap-5 max-w-7xl mx-auto md:items-start h-96">
-          <div className="font-bold text-2xl md:text-4xl md:text-left font-heading tracking-wide pl-3">
-            <h1>OVERALL RANKING</h1>
+          <div className="font-bold text-2xl md:text-4xl md:text-left font-sans tracking-wide pl-3">
+            <h1>Overall Ranking</h1>
           </div>
           <Tableshow data={data} />
         </div>
@@ -41,7 +38,7 @@ export default function Home({ data }: any) {
             <h1 className="flex text-center sm:text-left font-bold text-2xl md:text-4xl">
               Who are we?
             </h1>
-            <div className="text-text-secondary text-base">
+            <div className="text-text-secondary text-lg">
               BlockMetric is an{" "}
               <strong className="text-gray-300">
                 Open-source blockchain analysis platform

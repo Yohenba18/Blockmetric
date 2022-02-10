@@ -27,10 +27,10 @@ function Analysis({ data, analysisData }: any) {
   }, []);
 
   if (loading) {
-    return <h1>Loading....</h1>;
+    return  <h1>Loading...</h1>
   }
 
-  // (
+   // (
   //   <>
   //     <Layout>
   //       <div className="flex justify-center align-middle bg-background-primary h-96">
@@ -44,21 +44,22 @@ function Analysis({ data, analysisData }: any) {
   //       </div>
   //     </Layout>
   //   </>
-  // );
+  // );;
+
 
   return (
     <>
       <Layout>
         <div className="bg-gradient-to-b from-background-secondary2">
           <div className="max-w-7xl mx-auto py-10 ">
-            <div className="font-bold text-2xl md:text-5xl my-5 font-heading tracking-wide ml-5">
+            <div className="font-bold text-2xl md:text-5xl my-5 font-sans tracking-wide ml-5">
               Ranking
             </div>
             <Tableshow data={data} />
           </div>
         </div>
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-center font-bold text-2xl lg:text-5xl my-5 text-center font-heading tracking-wide gap-8 mb-5">
+          <div className="flex items-center justify-center font-bold text-2xl lg:text-5xl my-5 text-center font-sans tracking-wide gap-8 mb-5">
             <hr className="border-activepurple shadow-lg shadow-cyan-500/50  w-20 sm:w-40  md:w-60  lg:w-80 border-2 bg-activepurple" />
             Detail Analysis
             <hr className="border-activepurple shadow-lg shadow-cyan-500/50  w-20 sm:w-40  md:w-60  lg:w-80 border-2 bg-activepurple" />

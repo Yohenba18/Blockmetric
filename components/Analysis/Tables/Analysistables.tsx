@@ -1,12 +1,8 @@
 import { SingleTable } from "./SingleTable";
-// import data from "../../../data/Analysis";
 import { Graph } from "../../Graph/Graph";
 
 export const Analysistables = ({ data }: any) => {
-  // data.map((analysisData: any) => {
-  //  return analysisData.data.sort(({ a, b }: any) => b.value - a.value);
-  // });
-  // console.log(data)
+
 
   return (
     <div className="max-w-7xl mx-auto my-10">
