@@ -32,7 +32,7 @@ function Contactus() {
     <>
       <div className="bg-background-primary text-white h-auto">
         <Layout>
-          <div className="bg-gradient-to-r from-gradientpurple mx-2xl mx-auto md:flex md:justify-evenly gap-20">
+          <div className="bg-gradient-to-r from-background-gradientpurple mx-2xl mx-auto md:flex md:justify-evenly gap-20">
             <div className="py-36 md:p-10 flex flex-col items-center md:items-start">
               <div className="font-extrabold text-3xl md:text-5xl">
                 Contact Us
@@ -67,7 +67,7 @@ function Contactus() {
                     className="w-80 h-40 px-7 py-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"
                   />
                 </div>
-                <button className="w-80 md:w-3/4 bg-buttonbg hover:shadow-xl p-2 rounded-md">
+                <button className="w-80 md:w-3/4 bg-background-button hover:shadow-xl p-2 rounded-md">
                   Submit
                 </button>
               </form>

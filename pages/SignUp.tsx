@@ -31,7 +31,7 @@ function SignUp() {
     <>
       <Layout>
         <div className="mx-2xl mx-auto md:flex md:justify-evenly gap-20 py-5 md:py-0 my-10">
-          <div className="flex flex-col mx-auto lg:mx-0 gap-4 py-20 sm:py-20 sm:w-3/4 md:w-auto md:p-10 md:py-20 text-center bg-gradient-to-r from-gradientpurple ">
+          <div className="flex flex-col mx-auto lg:mx-0 gap-4 py-20 sm:py-20 sm:w-3/4 md:w-auto md:p-10 md:py-20 text-center bg-gradient-to-r from-background-gradientpurple ">
             <div className="font-extrabold text-4xl">Sign Up</div>
             <div className="flex justify-center items-center gap-2 mt-4">
               <hr className="w-28 border-2 bg-green-600 border-green-600" />

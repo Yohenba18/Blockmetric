@@ -10,7 +10,7 @@ export const Analysistables = ({ data }: any) => {
         return (
           <>
             <div
-              className={`flex flex-col gap-10 my-20 md:flex-row md:justify-evenly items-center ${
+              className={`flex flex-col gap-10 my-20 md:flex-row md:justify-evenly  ${
                 dat.id % 2 === 0 && "md:flex-row-reverse"
               }`}
             >

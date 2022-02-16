@@ -25,7 +25,7 @@ export const Singlecard = ({ id, name, url, words, designation }: any) => {
           </h4>
         </div>
       </div>
-      <div className="text-text-secondary text-center text-sm mt-7 md:px-6">
+      <div className="text-text-secondary-100 text-center text-sm mt-7 md:px-6">
         <p>{words}</p>
       </div>
     </div>

@@ -10,8 +10,8 @@ import { motion } from "framer-motion";
 const Fotter: React.FC = () => {
   return (
     <>
-      <footer className="bg-navblack">
-        <div className="flex flex-col gap-4 static bottom-0 p-8 px-2 pb-1 md:px-2 md:max-w-7xl mx-auto">
+      <footer className="bg-background-black-200">
+        <div className="flex flex-col gap-12 static bottom-0 p-8 px-2 py-12  md:px-2 md:max-w-7xl mx-auto">
           <div className="flex flex-col mb-4 justify-between md:flex-row">
             <div className="mb-4 text-xs text-center sm:text-sm md:text-base md:mr-20 md:text-left">
               <motion.div
@@ -19,7 +19,6 @@ const Fotter: React.FC = () => {
                 whileHover={{ scale: 1.3, originX: 0 }}
                 whileTap={{ scale: 0.9 }}
               >
-                {/* <h2>Blockmetric</h2> */}
                 <Image src={Blockmetriclogo} className="cursor-pointer" />
               </motion.div>
             </div>
@@ -45,17 +44,21 @@ const Fotter: React.FC = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Image src={twittericon} className="cursor-pointer" />
+                    <Link href="https://twitter.com/Blockmetric">
+                      <Image src={twittericon} className="cursor-pointer" />
+                    </Link>
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Image src={linkedinicon} className="cursor-pointer" />
+                    <Link href="https://www.linkedin.com/company/blockmetric/about/?viewAsMember=true">
+                      <Image src={linkedinicon} className="cursor-pointer" />
+                    </Link>
                   </motion.div>
                 </div>
                 <Link href="/Contactus">
-                  <p className="hidden sm:flex text-text-secondary text-sm cursor-pointer hover:text-gray-50">
+                  <p className="hidden sm:flex text-text-secondary-100 text-sm cursor-pointer hover:text-gray-50">
                     Contact us
                   </p>
                 </Link>
@@ -63,17 +66,17 @@ const Fotter: React.FC = () => {
               <div className="hidden sm:flex sm:flex-col">
                 <h3 className="mb-2 text-sm font-bold md:text-base">Company</h3>
                 <Link href="/AboutUs">
-                  <p className="text-text-secondary text-sm cursor-pointer hover:text-gray-50">
+                  <p className="text-text-secondary-100 text-sm cursor-pointer hover:text-gray-50">
                     About Us
                   </p>
                 </Link>
                 <Link href="/TAndC">
-                  <p className="text-text-secondary text-sm cursor-pointer hover:text-gray-50">
+                  <p className="text-text-secondary-100 text-sm cursor-pointer hover:text-gray-50">
                     Terms and conditions
                   </p>
                 </Link>
                 <Link href="/Privacy">
-                  <p className="text-text-secondary text-sm cursor-pointer hover:text-gray-50">
+                  <p className="text-text-secondary-100 text-sm cursor-pointer hover:text-gray-50">
                     Privacy Policy
                   </p>
                 </Link>
@@ -81,12 +84,12 @@ const Fotter: React.FC = () => {
               <div className="hidden sm:flex sm:flex-col">
                 <h3 className="mb-2 text-xs font-bold md:text-base">Join Us</h3>
                 <Link href="/Careers">
-                  <p className="text-text-secondary text-sm cursor-pointer hover:text-gray-50">
+                  <p className="text-text-secondary-100 text-sm cursor-pointer hover:text-gray-50">
                     Careers
                   </p>
                 </Link>
                 <Link href="https://discord.gg/cZ48YvYT">
-                  <p className="text-text-secondary text-sm cursor-pointer hover:text-gray-50">
+                  <p className="text-text-secondary-100 text-sm cursor-pointer hover:text-gray-50">
                     Community
                   </p>
                 </Link>

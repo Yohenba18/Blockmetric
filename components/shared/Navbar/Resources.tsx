@@ -7,7 +7,7 @@ export const Resources = ({ setShowDrawer, mobile }: any) => {
     <>
       <div
         className={`flex flex-col text-gray-300 p-5 gap-2 ${
-          mobile ? "w-full" : "w-48 absolute mt-5 bg-navblack"
+          mobile ? "w-full" : "w-48 absolute mt-5 bg-background-black-200"
         }`}
       >
         <Link href="https://discord.gg/cZ48YvYT">

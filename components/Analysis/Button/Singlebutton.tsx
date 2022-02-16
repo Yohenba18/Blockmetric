@@ -5,7 +5,7 @@ export const Singlebutton = ({ title }: any) => {
   return (
     <>
       <motion.button
-        className="bg-background-secondary2 w-56  hover:bg-activepurple rounded-md px-6 py-2 "
+        className="bg-background-secondary-300 w-56  hover:bg-activepurple rounded-md px-6 py-2 "
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >

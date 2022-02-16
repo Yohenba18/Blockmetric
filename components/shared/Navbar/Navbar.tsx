@@ -38,7 +38,7 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <Headroom wrapperStyle={{ height: "90px" }} style={{ height: "90px" }}>
-        <header className="bg-background-primary px-5 md:px-10 py-5 z-20">
+        <header className="bg-background-primary-200 px-5 md:px-10 py-5 z-20">
           <div className="flex items-center justify-between align-middle ">
             <div className="flex mt-2">
               <Link href="/">
@@ -156,7 +156,7 @@ export const Navbar: React.FC = () => {
                 session={session || isAuthenticated}
               />
               <button onClick={() => setOpenModal(!openModal)}>
-                <ChevronUpIcon className="relative mx-auto text-buttonbg h-8 w-8 transform-gpu transition-transform hover:scale-125 active:scale-90" />
+                <ChevronUpIcon className="relative mx-auto text-text-green h-8 w-8 transform-gpu transition-transform hover:scale-125 active:scale-90" />
               </button>
             </motion.nav>
           )}

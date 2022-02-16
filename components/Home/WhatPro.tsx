@@ -29,7 +29,7 @@ export const WhatPro: React.FC = () => {
                 <h1 className="font-semibold text-lg md:text-3xl mb-4">
                   {provide.title}
                 </h1>
-                <p className="hidden md:flex text-text-secondary text-lg text-centermax-w-lg">
+                <p className="hidden md:flex text-text-secondary-100 text-lg text-centermax-w-lg">
                   {provide.description}
                 </p>
               </div>

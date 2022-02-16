@@ -81,7 +81,7 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
           placeholder="Search"
           className="pl-10 w-44 h-8 rounded-l-md bg-gray-200 text-black text-base focus:outline-none focus:ring-2 focus:ring-activepurple"
         />
-        <button className="px-2 h-8 rounded-r-md bg-background-secondary2 text-base">
+        <button className="px-2 h-8 rounded-r-md bg-background-secondary-300 text-base">
           Go
         </button>
       </div>
