@@ -53,7 +53,7 @@ function Analysis({ data, analysisData }: any) {
         <div className="bg-gradient-to-b from-background-secondary-300">
           <div className="max-w-7xl mx-auto py-10 ">
             <div className="font-bold text-2xl md:text-5xl my-5 font-sans tracking-wide ml-5">
-              Ranking
+              Blockchains
             </div>
             <Tableshow data={data} />
           </div>
