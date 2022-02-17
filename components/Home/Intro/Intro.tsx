@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import image from "../../../assets/svg/Analysis.svg";
+import image from "../../../assets/svg/analysis.svg";
 
 const Intro = () => {
   return (
