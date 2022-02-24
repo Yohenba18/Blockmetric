@@ -34,9 +34,7 @@ const Table: React.FC<TableProps> = (props) => {
       <div className="bg-background-primary-100 p-2 rounded-md overflow-x-auto mx-auto w-full">
         <table className="table-auto lg:w-full">
           <thead className="bg-background-table text-text-secondary-100 text-sm">
-            <tr>
-              {props.children}
-            </tr>
+            <tr>{props.children}</tr>
           </thead>
           <tbody>
             {props.data.map((row: any, rowIndex: number) => (

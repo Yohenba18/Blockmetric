@@ -1,6 +1,3 @@
-import Image from "next/image";
-import analysis from "../assets/photo/analysis.jpg";
-import teams from "../assets/svg/team.svg";
 import Blogcards from "../components/Home/Cards/Blogcards";
 import Layout from "../components/shared/Layout";
 import Intro from "../components/Home/Intro/Intro";

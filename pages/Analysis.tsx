@@ -5,10 +5,10 @@ import Tableshow from "../components/Table/Tableshow";
 import { Button } from "../components/Analysis/Button/Button";
 import { useRouter } from "next/router";
 import { Analysistables } from "../components/Analysis/Tables/Analysistables";
-import Loader from "react-loader-spinner";
+import { Rings } from "react-loader-spinner";
 import { useMoralis } from "react-moralis";
-
-function Analysis({ data, analysisData }: any) {
+// { analysisData }: any
+function Analysis() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const { isAuthenticated } = useMoralis();
@@ -27,25 +27,16 @@ function Analysis({ data, analysisData }: any) {
   }, []);
 
   if (loading) {
-    return  <h1>Loading...</h1>
+    return (
+      <>
+        <Layout>
+          <div className="flex justify-center align-middle bg-background-primary h-screen">
+            <Rings height="100" width="100" color="grey" ariaLabel="loading'" />
+          </div>
+        </Layout>
+      </>
+    );
   }
-
-   // (
-  //   <>
-  //     <Layout>
-  //       <div className="flex justify-center align-middle bg-background-primary h-96">
-  //         <Loader
-  //           type="Circles"
-  //           color="#02DAC5"
-  //           height={200}
-  //           width={200}
-  //           timeout={3000} //3 secs
-  //         />
-  //       </div>
-  //     </Layout>
-  //   </>
-  // );;
-
 
   return (
     <>
@@ -55,7 +46,8 @@ function Analysis({ data, analysisData }: any) {
             <div className="font-bold text-2xl md:text-5xl my-5 font-sans tracking-wide ml-5">
               Blockchains
             </div>
-            <Tableshow data={data} />
+            <Tableshow />
+            {/* data={data}  */}
           </div>
         </div>
         <div className="max-w-7xl mx-auto">
@@ -66,36 +58,36 @@ function Analysis({ data, analysisData }: any) {
           </div>
           <Button />
         </div>
-        <Analysistables data={analysisData} />
+        <Analysistables />
       </Layout>
     </>
   );
 }
 
-export async function getServerSideProps() {
-  const allDataApi = "https://blockmetric-back.herokuapp.com/api/v1/";
+// export async function getServerSideProps() {
+//   const allDataApi = "https://blockmetric-back.herokuapp.com/api/v1/";
 
-  const result = await fetch(allDataApi);
-  const data = await result.json();
+// const result = await fetch(allDataApi);
+// const data = await result.json();
 
-  const analysisData = [];
+//   const analysisData = [];
 
-  const transactionData = await fetch(allDataApi + "Transaction");
-  analysisData.push(await transactionData.json());
+//   const transactionData = await fetch(allDataApi + "Transaction");
+//   analysisData.push(await transactionData.json());
 
-  const developersData = await fetch(allDataApi + "Developers");
-  analysisData.push(await developersData.json());
+//   const developersData = await fetch(allDataApi + "Developers");
+//   analysisData.push(await developersData.json());
 
-  const marketData = await fetch(allDataApi + "Price");
-  analysisData.push(await marketData.json());
+//   const marketData = await fetch(allDataApi + "Price");
+//   analysisData.push(await marketData.json());
 
-  for (var i in analysisData) {
-    analysisData[i].id = i;
-  }
+//   for (var i in analysisData) {
+//     analysisData[i].id = i;
+//   }
 
-  return {
-    props: { data, analysisData },
-  };
-}
+//   return {
+//     props: { analysisData },
+//   };
+// }
 
 export default Analysis;
