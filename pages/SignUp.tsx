@@ -77,7 +77,7 @@ function SignUp() {
             </div>
           </div>
 
-          <div className="hidden md:flex md:items-center font-extrabold text-3xl md:text-5xl text-center ml-4">
+          <div className="hidden md:flex md:items-center font-medium text-3xl md:text-5xl text-center ml-4">
             Join to find <br /> out the best
             <br /> for your build
           </div>
