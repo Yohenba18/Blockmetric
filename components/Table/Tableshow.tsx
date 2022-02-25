@@ -28,7 +28,7 @@ const Tableshow = () => {
   if (loading) {
     return (
       <>
-        <div className="flex justify-center align-middle bg-background-primary h-screen mt-10">
+        <div className="flex justify-center align-middle bg-background-primary h-96 mt-10">
           <Rings
             height="100"
             width="100"
