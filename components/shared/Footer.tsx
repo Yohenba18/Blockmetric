@@ -88,7 +88,7 @@ const Fotter: React.FC = () => {
                     Careers
                   </p>
                 </Link>
-                <Link href="https://discord.gg/cZ48YvYT">
+                <Link href="https://discord.gg/zxrm4vfx">
                   <p className="text-text-secondary-100 text-sm cursor-pointer hover:text-gray-50">
                     Community
                   </p>

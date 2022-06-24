@@ -5,7 +5,9 @@ const TAndC = () => {
     <>
       <Layout>
         <div className="text-white my-10 mx-5 md:mx-20">
-          <div className="text-center font-bold text-3xl border-b-2 p-3 mb-5 border-teal-200">TERMS AND CONDITION</div>
+          <div className="text-center font-bold text-3xl border-b-2 p-3 mb-5 border-teal-200">
+            TERMS AND CONDITION
+          </div>
 
           <p>Welcome to BlockMetric!</p>
 
@@ -21,7 +23,7 @@ const TAndC = () => {
           </p>
 
           <p>
-           {`The following terminology applies to these Terms and Conditions,
+            {`The following terminology applies to these Terms and Conditions,
             Privacy Statement and Disclaimer Notice and all Agreements:
             "Client", "You" and "Your" refers to you, the person log on this
             website and compliant to the Company’s terms and conditions. "The

@@ -10,7 +10,7 @@ export const Resources = ({ setShowDrawer, mobile }: any) => {
           mobile ? "w-full" : "w-48 absolute mt-5 bg-background-black-200"
         }`}
       >
-        <Link href="https://discord.gg/cZ48YvYT">
+        <Link href="https://discord.gg/zxrm4vfx">
           <a
             onClick={(e) => setShowDrawer(false)}
             className={`hover:text-green-500 cursor-pointer

@@ -73,29 +73,27 @@ export const Navlinkmobile = ({ router, setShowDrawer, session }: any) => {
       </Link>
       {session && (
         <>
-          <Link href="/Analysis">
+          <Link href="/Leaderboard">
             <a
               onClick={(e) => setShowDrawer(false)}
               className={`flex gap-4 text-gray-300
-                      ${
-                        router.pathname === "/Analysis"
-                          ? "text-activepurple"
-                          : ""
-                      }`}
+                      ${router.pathname === "/Leaderboard"
+                  ? "text-activepurple"
+                  : ""
+                }`}
             >
               <ChartBarIcon className="h-6 w-6" />
-              Analytics
+              Leaderboard
             </a>
           </Link>
           <Link href="/Product">
             <a
               onClick={(e) => setShowDrawer(false)}
               className={`flex gap-4 text-gray-300
-                      ${
-                        router.pathname === "/Product"
-                          ? "text-activepurple "
-                          : ""
-                      }`}
+                      ${router.pathname === "/FindChain"
+                  ? "text-activepurple "
+                  : ""
+                }`}
             >
               <ViewGridIcon className=" h-6 w-6" />
               Product

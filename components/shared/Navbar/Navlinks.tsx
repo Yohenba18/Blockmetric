@@ -26,17 +26,17 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
       </Link>
       {session && (
         <>
-          <Link href="/Analysis">
+          <Link href="/Leaderboard">
             <a
               onClick={(e) => setShowDrawer(false)}
               className={`
                 ${
-                  router.pathname === "/Analysis"
+                  router.pathname === "/Leaderboard"
                     ? "text-activepurple border-b-2 border-activepurple"
                     : "hover:text-white"
                 }`}
             >
-              Analytics
+              Leaderboard
             </a>
           </Link>
           <Link href="/Product">
@@ -44,7 +44,7 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
               onClick={(e) => setShowDrawer(false)}
               className={`
                 ${
-                  router.pathname === "/Product"
+                  router.pathname === "/FindChain"
                     ? "text-activepurple border-b-2 border-activepurple"
                     : "hover:text-white"
                 }`}

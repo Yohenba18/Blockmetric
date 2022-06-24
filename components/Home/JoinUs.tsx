@@ -12,7 +12,7 @@ const JoinUs = () => {
           </div>
           <div>
             <button className="bg-background-green text-base px-2 rounded-lg shadow-xl w-40 py-2">
-              <a href="https://discord.gg/8TVuJt3f4k">Join Us</a>
+              <a href="https://discord.gg/zxrm4vfx">Join Us</a>
             </button>
           </div>
         </div>

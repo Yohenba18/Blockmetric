@@ -55,7 +55,7 @@ export const Analysistables = () => {
       {newdata.map((dat: any) => {
         return (
           <>
-            <div
+            <div key={dat.id}
               className={`flex flex-col gap-10 my-20 md:flex-row md:justify-evenly  ${
                 dat.id % 2 === 0 && "md:flex-row-reverse"
               }`}

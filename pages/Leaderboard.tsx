@@ -7,8 +7,8 @@ import { useRouter } from "next/router";
 import { Analysistables } from "../components/Analysis/Tables/Analysistables";
 import { Rings } from "react-loader-spinner";
 import { useMoralis } from "react-moralis";
-// { analysisData }: any
-function Analysis() {
+
+function Leaderboard() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const { isAuthenticated } = useMoralis();
@@ -64,30 +64,4 @@ function Analysis() {
   );
 }
 
-// export async function getServerSideProps() {
-//   const allDataApi = "https://blockmetric-back.herokuapp.com/api/v1/";
-
-// const result = await fetch(allDataApi);
-// const data = await result.json();
-
-//   const analysisData = [];
-
-//   const transactionData = await fetch(allDataApi + "Transaction");
-//   analysisData.push(await transactionData.json());
-
-//   const developersData = await fetch(allDataApi + "Developers");
-//   analysisData.push(await developersData.json());
-
-//   const marketData = await fetch(allDataApi + "Price");
-//   analysisData.push(await marketData.json());
-
-//   for (var i in analysisData) {
-//     analysisData[i].id = i;
-//   }
-
-//   return {
-//     props: { analysisData },
-//   };
-// }
-
-export default Analysis;
+export default Leaderboard;

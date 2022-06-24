@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content="Blockmetric" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Provider
         options={{
           clientMaxAge: 0,

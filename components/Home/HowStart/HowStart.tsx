@@ -41,7 +41,7 @@ const HowStart = () => {
               decisions.
             </div>
             <button className="bg-background-green text-base px-4 rounded-lg shadow-xl w-44 py-3">
-              <a href="https://discord.gg/cZ48YvYT">Join Us</a>
+              <a href="https://discord.gg/zxrm4vfx">Join Us</a>
             </button>
           </motion.div>
           <motion.div
