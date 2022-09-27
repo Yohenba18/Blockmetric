@@ -1,6 +1,6 @@
 import Yohenba from "../assets/images/yohenba.png"
 import Nixon from "../assets/images/nixon.jpg"
-import Rohit from "../assets/images/Rohit.jpeg"
+import Parth from "../assets/images/parth.jpeg"
 
 export default [
     {
@@ -11,14 +11,8 @@ export default [
     },
     {
         id:1,
-        image: Rohit,
-        name: "Rohit Singh",
-        skill: "Maketing & Finance"
-    },
-    {
-        id:2,
-        image: Nixon,
-        name: "Nixon Irom",
-        skill: "Content"
+        image: Parth,
+        name: "Parth khandelwal",
+        skill: "Machine learning"
     }
 ];
