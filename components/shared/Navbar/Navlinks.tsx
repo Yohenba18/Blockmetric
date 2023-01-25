@@ -39,7 +39,7 @@ export const Navlinks = ({ router, setShowDrawer, session }: any) => {
               Leaderboard
             </a>
           </Link>
-          <Link href="/Product">
+          <Link href="/FindChain">
             <a
               onClick={(e) => setShowDrawer(false)}
               className={`

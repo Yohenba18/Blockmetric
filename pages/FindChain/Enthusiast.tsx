@@ -17,7 +17,7 @@ const Enthusiast = () => {
             </div>
           </div>
           <div className="text-3xl font-bold text-yellow-400">
-            Please fill the following details, for us to help you the best
+            Please fill the following details, for us to help you the best.
           </div>
           <Form />
         </div>

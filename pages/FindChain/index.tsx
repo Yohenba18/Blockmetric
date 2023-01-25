@@ -12,7 +12,7 @@ const FindChain = () => {
               Welcome to Find chain
             </div>
             <div className="text-lg">
-              We help you find the right chain according to your requirements
+              We help you find the right chain according to your requirements.
             </div>
           </div>
           <Form />
