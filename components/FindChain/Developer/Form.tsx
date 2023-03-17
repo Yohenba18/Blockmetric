@@ -55,7 +55,7 @@ const Form = () => {
         return currentDifference < nearestDifference ? current : nearest;
       });
       SetAns(nearestObject.Chains);
-      alert(nearestObject["Chains"]);
+      
     } else if (value === "NFT") {
       // const strNum = "1,234,567";
       // const intNum = parseInt(strNum.replace(/,/g, ""));

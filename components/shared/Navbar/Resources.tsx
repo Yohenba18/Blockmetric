@@ -49,6 +49,18 @@ export const Resources = ({ setShowDrawer, mobile }: any) => {
             APIs
           </a>
         </Link>
+        <hr className="bg-white" />
+        <Link href="https://app.powerbi.com/links/QTLjbGv7S8?ctid=813e6569-4e44-4d95-88a0-16a97bd5277c&pbi_source=linkShare">
+          <a
+            onClick={(e) => setShowDrawer(false)}
+            className={`hover:text-green-500 cursor-pointer
+                    ${router.pathname === "/Apis" ? "text-activepurple" : ""} ${
+              mobile && "ml-5"
+            }`}
+          >
+            PowerUI dashboard
+          </a>
+        </Link>
       </div>
     </>
   );
