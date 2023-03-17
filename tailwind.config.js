@@ -22,7 +22,7 @@ module.exports = {
           gradientpurple: "#7951A8",
         },
         shadow: {
-          blue: "#326dcd"
+          blue: "#326dcd",
         },
         border: {
           green: "#00B13B",

@@ -1,9 +1,86 @@
 import React, { useState } from "react";
+import NFTData from "../../../data/NFTData";
+import data from "../../../data/BlockchainData";
+
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
 
 const Form = () => {
-  const options = ["NFT", "Blockchain"];
+  let subtitle: any;
+
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = "#f00";
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  const options = ["Choose Option", "NFT", "Blockchain"];
 
   const [value, setValue] = useState("");
+  const [transactionSpeed, setTransactionSpeed] = useState(0);
+  const [sales, setSales] = useState(0);
+  const [ans, SetAns] = useState("");
+
+  const handleCalculation = (event: any) => {
+    event.preventDefault();
+    openModal();
+    if (value === "Blockchain") {
+      let blockchainData = Object.values(data);
+      const nearestObject = blockchainData.reduce((nearest, current) => {
+        const nearestDifference = Math.abs(
+          nearest["Avg transaction speed"] - transactionSpeed
+        );
+        const currentDifference = Math.abs(
+          current["Avg transaction speed"] - transactionSpeed
+        );
+        return currentDifference < nearestDifference ? current : nearest;
+      });
+      SetAns(nearestObject.Chains);
+      alert(nearestObject["Chains"]);
+    } else if (value === "NFT") {
+      // const strNum = "1,234,567";
+      // const intNum = parseInt(strNum.replace(/,/g, ""));
+      // console.log(intNum);
+      const nftarray = NFTData.map((obj) => ({
+        collections: obj.Collections,
+        sales: parseInt(obj.Sales.replace(/\D/g, "")),
+      }));
+      console.log(nftarray);
+
+      const nearestObject = nftarray.reduce((nearest, current) => {
+        const nearestDifference = Math.abs(nearest.sales - sales);
+        const currentDifference = Math.abs(current.sales - sales);
+        return currentDifference < nearestDifference ? current : nearest;
+      });
+      SetAns(nearestObject.collections);
+      console.log(nearestObject.collections);
+    }
+  };
+
+  const handleChange = (e: any) => {
+    value === "Blockchain"
+      ? setTransactionSpeed(e.target.value)
+      : setSales(e.target.value);
+  };
 
   return (
     <div>
@@ -49,6 +126,7 @@ const Form = () => {
                 placeholder="Amount"
                 className="px-2"
                 min={0}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -61,14 +139,32 @@ const Form = () => {
                 placeholder="Transactions per second"
                 className="px-2"
                 min={0}
+                name="transactionSpeed"
+                onChange={handleChange}
               />
             </div>
           </div>
         )}
-        <button className="py-4 px-2 bg-background-green rounded-lg w-48">
+        <button
+          className="py-4 px-2 bg-background-green rounded-lg w-48"
+          onClick={handleCalculation}
+        >
           Next
         </button>
       </form>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <button onClick={closeModal} className=" text-red-700 cursor-pointer text-3xl font-bold">X</button>
+        <div className="flex flex-col p-5 gap-5">
+          
+          <div className="text-xl font-semibold">{ans}</div>
+        </div>
+      </Modal>
     </div>
   );
 };

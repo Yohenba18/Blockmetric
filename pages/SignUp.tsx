@@ -36,7 +36,7 @@ function SignUp() {
             <div className="flex justify-center items-center gap-2 mt-4">
               <hr className="w-28 border-2 bg-green-600 border-green-600" />
               <div className="pb-1">Continue with</div>
-              <hr className="w-28 border-2 bg-green-600 border-green-600  " />
+              <hr className="w-28 border-2 bg-green-600yh+9 border-green-600  " />
             </div>
             <div className="mt-5 mx-10 md:mx-0 flex flex-col justify-center gap-6">
               <Link href="/api/auth/signin">
