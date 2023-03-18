@@ -58,7 +58,7 @@ export const Resources = ({ setShowDrawer, mobile }: any) => {
               mobile && "ml-5"
             }`}
           >
-            PowerUI dashboard
+            PowerBI dashboard
           </a>
         </Link>
       </div>
